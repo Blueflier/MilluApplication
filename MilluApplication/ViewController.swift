@@ -50,7 +50,8 @@ class ViewController: UIViewController {
         let player=AVPlayer(url: URL(fileURLWithPath: Bundle.main.path(forResource: "milluLogo", ofType: ".m4v")!))
         let layer = AVPlayerLayer(player: player)
         layer.frame = view.bounds
-        layer.videoGravity = .resizeAspectFill
+        
+        layer.videoGravity = .resizeAspect
         view.layer.addSublayer(layer)
         player.volume = 0
         player.play()
