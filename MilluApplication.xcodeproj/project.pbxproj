@@ -16,6 +16,7 @@
 		9029F90428C29CC1009E7819 /* MilluApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9029F90328C29CC1009E7819 /* MilluApplicationTests.swift */; };
 		9029F90E28C29CC1009E7819 /* MilluApplicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9029F90D28C29CC1009E7819 /* MilluApplicationUITests.swift */; };
 		9029F91028C29CC1009E7819 /* MilluApplicationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9029F90F28C29CC1009E7819 /* MilluApplicationUITestsLaunchTests.swift */; };
+		9029F91E28C2AC1B009E7819 /* milluLogo.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 9029F91D28C2AC1B009E7819 /* milluLogo.m4v */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		9029F90928C29CC1009E7819 /* MilluApplicationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MilluApplicationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9029F90D28C29CC1009E7819 /* MilluApplicationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilluApplicationUITests.swift; sourceTree = "<group>"; };
 		9029F90F28C29CC1009E7819 /* MilluApplicationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilluApplicationUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9029F91D28C2AC1B009E7819 /* milluLogo.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = milluLogo.m4v; path = ../../../../Downloads/milluLogo.m4v; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 		9029F8EB28C29CC0009E7819 /* MilluApplication */ = {
 			isa = PBXGroup;
 			children = (
+				9029F91D28C2AC1B009E7819 /* milluLogo.m4v */,
 				9029F8EC28C29CC0009E7819 /* AppDelegate.swift */,
 				9029F8EE28C29CC0009E7819 /* SceneDelegate.swift */,
 				9029F8F028C29CC0009E7819 /* ViewController.swift */,
@@ -233,6 +236,7 @@
 			files = (
 				9029F8F928C29CC1009E7819 /* LaunchScreen.storyboard in Resources */,
 				9029F8F628C29CC1009E7819 /* Assets.xcassets in Resources */,
+				9029F91E28C2AC1B009E7819 /* milluLogo.m4v in Resources */,
 				9029F8F428C29CC0009E7819 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
