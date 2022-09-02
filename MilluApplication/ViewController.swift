@@ -13,6 +13,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        //test comment - ellieanna
+        
         // Step 1: Ask for permission
         let center = UNUserNotificationCenter.current()
         
