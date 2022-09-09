@@ -44,6 +44,8 @@ class ViewController: UIViewController {
 //        // Check the error parameter and handle any errors
     
         
+    
+    //play the Millu logo <------------------ need one with new aspect ratio
     override func viewDidAppear( _ animated: Bool) {
         super.viewDidAppear(animated)
         

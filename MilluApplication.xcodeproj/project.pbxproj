@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		1417A03828C2AF5D00340C2D /* milluLogo.m4v in Resources */ = {isa = PBXBuildFile; fileRef = 1417A03728C2AE4100340C2D /* milluLogo.m4v */; };
+		14C5B19A28CBC34700B173C6 /* templateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C5B19928CBC34700B173C6 /* templateCard.swift */; };
+		14C5B19C28CBC73500B173C6 /* qotdCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C5B19B28CBC73500B173C6 /* qotdCard.swift */; };
+		14C5B19E28CBC7C000B173C6 /* activityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C5B19D28CBC7C000B173C6 /* activityCard.swift */; };
+		14C5B1A028CBC8DB00B173C6 /* questionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C5B19F28CBC8DB00B173C6 /* questionCard.swift */; };
+		14C5B1A228CBC94A00B173C6 /* cardPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C5B1A128CBC94900B173C6 /* cardPage.swift */; };
 		9029F8ED28C29CC0009E7819 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9029F8EC28C29CC0009E7819 /* AppDelegate.swift */; };
 		9029F8EF28C29CC0009E7819 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9029F8EE28C29CC0009E7819 /* SceneDelegate.swift */; };
 		9029F8F128C29CC0009E7819 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9029F8F028C29CC0009E7819 /* ViewController.swift */; };
@@ -38,6 +43,11 @@
 
 /* Begin PBXFileReference section */
 		1417A03728C2AE4100340C2D /* milluLogo.m4v */ = {isa = PBXFileReference; lastKnownFileType = file; name = milluLogo.m4v; path = ../../milluLogo.m4v; sourceTree = "<group>"; };
+		14C5B19928CBC34700B173C6 /* templateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = templateCard.swift; sourceTree = "<group>"; };
+		14C5B19B28CBC73500B173C6 /* qotdCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = qotdCard.swift; sourceTree = "<group>"; };
+		14C5B19D28CBC7C000B173C6 /* activityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = activityCard.swift; sourceTree = "<group>"; };
+		14C5B19F28CBC8DB00B173C6 /* questionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionCard.swift; sourceTree = "<group>"; };
+		14C5B1A128CBC94900B173C6 /* cardPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardPage.swift; sourceTree = "<group>"; };
 		9029F8E928C29CC0009E7819 /* MilluApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MilluApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9029F8EC28C29CC0009E7819 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9029F8EE28C29CC0009E7819 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +115,11 @@
 				9029F8EC28C29CC0009E7819 /* AppDelegate.swift */,
 				9029F8EE28C29CC0009E7819 /* SceneDelegate.swift */,
 				9029F8F028C29CC0009E7819 /* ViewController.swift */,
+				14C5B19928CBC34700B173C6 /* templateCard.swift */,
+				14C5B19B28CBC73500B173C6 /* qotdCard.swift */,
+				14C5B19D28CBC7C000B173C6 /* activityCard.swift */,
+				14C5B19F28CBC8DB00B173C6 /* questionCard.swift */,
+				14C5B1A128CBC94900B173C6 /* cardPage.swift */,
 				9029F8F228C29CC0009E7819 /* Main.storyboard */,
 				9029F8F528C29CC1009E7819 /* Assets.xcassets */,
 				9029F8F728C29CC1009E7819 /* LaunchScreen.storyboard */,
@@ -262,9 +277,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14C5B1A228CBC94A00B173C6 /* cardPage.swift in Sources */,
 				9029F8F128C29CC0009E7819 /* ViewController.swift in Sources */,
+				14C5B19C28CBC73500B173C6 /* qotdCard.swift in Sources */,
+				14C5B19E28CBC7C000B173C6 /* activityCard.swift in Sources */,
 				9029F8ED28C29CC0009E7819 /* AppDelegate.swift in Sources */,
 				9029F8EF28C29CC0009E7819 /* SceneDelegate.swift in Sources */,
+				14C5B19A28CBC34700B173C6 /* templateCard.swift in Sources */,
+				14C5B1A028CBC8DB00B173C6 /* questionCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,6 +467,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -475,6 +496,7 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
