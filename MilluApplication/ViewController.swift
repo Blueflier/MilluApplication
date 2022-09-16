@@ -8,6 +8,8 @@
 import UIKit
 import AVKit
 import AVFoundation
+import NotificationCenter
+
 
 class ViewController: UIViewController {
 
@@ -57,9 +59,11 @@ class ViewController: UIViewController {
         view.layer.addSublayer(layer)
         player.volume = 0
         player.play()
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
+            self.performSegue(withIdentifier: "finishedPlayingVideo", sender: nil)
+        }
+        
     }
 }
     
-    
-    
-
