@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rdI-fA-z7C">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rdI-fA-z7C">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -94,13 +93,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fpa-lh-pwc">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="0.0" width="418" height="896"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V7b-JA-YwG">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="418" height="1500"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R8k-g4-6mw">
-                                                <rect key="frame" x="8" y="22" width="398" height="164"/>
+                                                <rect key="frame" x="10" y="22" width="398" height="164"/>
                                                 <subviews>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="geR-bT-suQ">
                                                         <rect key="frame" x="0.0" y="0.0" width="120" height="164"/>
@@ -125,9 +124,8 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ia-iY-MrT">
+                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ia-iY-MrT">
                                                         <rect key="frame" x="122" y="130" width="51" height="34"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system" title=""/>
                                                     </button>
@@ -137,11 +135,15 @@
                                                     <constraint firstItem="3O1-Oj-dEa" firstAttribute="top" secondItem="R8k-g4-6mw" secondAttribute="top" constant="10" id="2iO-bj-ln8"/>
                                                     <constraint firstAttribute="bottom" secondItem="geR-bT-suQ" secondAttribute="bottom" id="4wu-3M-Vmz"/>
                                                     <constraint firstItem="BYN-kt-MhL" firstAttribute="leading" secondItem="geR-bT-suQ" secondAttribute="trailing" constant="10" id="92u-Bo-EkP"/>
+                                                    <constraint firstItem="2ia-iY-MrT" firstAttribute="leading" secondItem="geR-bT-suQ" secondAttribute="trailing" constant="2" id="Cyu-dO-5d8"/>
                                                     <constraint firstItem="geR-bT-suQ" firstAttribute="leading" secondItem="R8k-g4-6mw" secondAttribute="leading" id="VeZ-wS-QZC"/>
                                                     <constraint firstItem="3O1-Oj-dEa" firstAttribute="leading" secondItem="geR-bT-suQ" secondAttribute="trailing" constant="10" id="Vys-44-Mq2"/>
+                                                    <constraint firstAttribute="width" constant="398" id="X9H-b4-WAm"/>
                                                     <constraint firstItem="geR-bT-suQ" firstAttribute="top" secondItem="R8k-g4-6mw" secondAttribute="top" id="i83-7F-63X"/>
                                                     <constraint firstAttribute="trailing" secondItem="BYN-kt-MhL" secondAttribute="trailing" constant="10" id="kVM-bt-Qj3"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="398" id="lcf-ga-uGU"/>
                                                     <constraint firstItem="BYN-kt-MhL" firstAttribute="top" secondItem="3O1-Oj-dEa" secondAttribute="bottom" constant="7.5" id="lfN-EU-s83"/>
+                                                    <constraint firstItem="geR-bT-suQ" firstAttribute="bottom" secondItem="2ia-iY-MrT" secondAttribute="bottom" id="tt0-AR-joY"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -152,6 +154,10 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="R8k-g4-6mw" secondAttribute="trailing" constant="10" id="1Od-Hs-YOL"/>
+                                            <constraint firstItem="R8k-g4-6mw" firstAttribute="leading" secondItem="V7b-JA-YwG" secondAttribute="leading" constant="10" id="Cpc-tv-f6M"/>
+                                            <constraint firstAttribute="bottom" secondItem="R8k-g4-6mw" secondAttribute="bottom" constant="1314" id="IOS-ad-pR7"/>
+                                            <constraint firstItem="R8k-g4-6mw" firstAttribute="top" secondItem="V7b-JA-YwG" secondAttribute="top" constant="22" id="cDL-Ai-vGa"/>
                                             <constraint firstAttribute="height" constant="1500" id="jvE-mD-4LL"/>
                                         </constraints>
                                     </view>
@@ -232,10 +238,10 @@
         </scene>
     </scenes>
     <resources>
-        <image name="heart" catalog="system" width="128" height="107"/>
-        <image name="house.fill" catalog="system" width="128" height="104"/>
-        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
-        <image name="person" catalog="system" width="128" height="121"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="person" catalog="system" width="128" height="117"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
