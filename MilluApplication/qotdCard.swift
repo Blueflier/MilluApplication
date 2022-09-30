@@ -9,6 +9,8 @@ import Foundation
 import UIKit
 
 //questionOfTheDay card which inherrits from templateCard
+
+
 class questionOfTheDay: templateCard {
     var publicDate: Date
     
