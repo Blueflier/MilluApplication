@@ -17,7 +17,7 @@ class homeViewController: UIViewController {
     }
     
     override func viewDidAppear( _ animated: Bool) {
-        qotdView.layer.cornerRadius = 5
+        //qotdView.layer.cornerRadius = 5
         
     }
     
