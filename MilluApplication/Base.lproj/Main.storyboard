@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rdI-fA-z7C">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rdI-fA-z7C">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -86,10 +85,10 @@
             </objects>
             <point key="canvasLocation" x="-3797" y="1466"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="yoq-2u-kq4">
             <objects>
-                <viewController id="SjQ-Dv-eoB" sceneMemberID="viewController">
+                <viewController id="SjQ-Dv-eoB" customClass="homeViewController" customModule="MilluApplication" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QcA-MH-f9i">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -103,38 +102,44 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R8k-g4-6mw">
                                                 <rect key="frame" x="8" y="8" width="398" height="164"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="geR-bT-suQ">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholderImage" translatesAutoresizingMaskIntoConstraints="NO" id="geR-bT-suQ">
                                                         <rect key="frame" x="0.0" y="0.0" width="126" height="164"/>
                                                         <color key="backgroundColor" red="0.41960784309999999" green="0.43921568630000002" blue="0.36078431370000003" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="126" id="Ewc-yk-pnm"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="126" id="XRU-Vf-43O"/>
                                                         </constraints>
                                                     </imageView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Question of the Day  |  September 25th" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3O1-Oj-dEa">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question of the Day  |  September 25th" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3O1-Oj-dEa">
                                                         <rect key="frame" x="134" y="8" width="256" height="15"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="15" id="SS9-7l-gQV"/>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="15" id="Tr4-Bc-L9G"/>
                                                             <constraint firstAttribute="width" constant="256" id="itS-de-TJD"/>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="256" id="vu9-5r-dxf"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="If you had to cross a river, how would you do it?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYN-kt-MhL">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you had to cross a river, how would you do it?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYN-kt-MhL">
                                                         <rect key="frame" x="134" y="31" width="256" height="91"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="256" id="dfw-v6-mJa"/>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="91" id="doo-QP-osG"/>
                                                             <constraint firstAttribute="height" constant="91" id="lvj-0E-BGV"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ia-iY-MrT">
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ia-iY-MrT">
                                                         <rect key="frame" x="134" y="130" width="31" height="34"/>
                                                         <constraints>
+                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="31" id="78K-jg-KjD"/>
                                                             <constraint firstAttribute="height" constant="34" id="BUq-sj-qcj"/>
                                                             <constraint firstAttribute="width" constant="31" id="kZr-Wd-95n"/>
+                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="rVw-0b-4cz"/>
                                                         </constraints>
                                                         <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <state key="normal" title="Button"/>
@@ -146,9 +151,21 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="2ia-iY-MrT" firstAttribute="leading" secondItem="geR-bT-suQ" secondAttribute="trailing" constant="8" id="3rZ-tX-cKb"/>
+                                                    <constraint firstAttribute="width" constant="398" id="4PT-wL-fH0"/>
+                                                    <constraint firstItem="2ia-iY-MrT" firstAttribute="leading" secondItem="geR-bT-suQ" secondAttribute="trailing" constant="8" id="4bL-dW-MLc"/>
+                                                    <constraint firstItem="geR-bT-suQ" firstAttribute="top" secondItem="R8k-g4-6mw" secondAttribute="top" id="EZh-9P-VK1"/>
+                                                    <constraint firstAttribute="trailing" secondItem="BYN-kt-MhL" secondAttribute="trailing" constant="8" id="ISD-tt-nm5"/>
+                                                    <constraint firstAttribute="bottom" secondItem="geR-bT-suQ" secondAttribute="bottom" id="RMX-no-foE"/>
                                                     <constraint firstItem="BYN-kt-MhL" firstAttribute="leading" secondItem="geR-bT-suQ" secondAttribute="trailing" constant="8" id="Siu-b2-Ekq"/>
                                                     <constraint firstItem="3O1-Oj-dEa" firstAttribute="leading" secondItem="geR-bT-suQ" secondAttribute="trailing" constant="8" id="aXH-hq-X2J"/>
                                                     <constraint firstItem="BYN-kt-MhL" firstAttribute="top" secondItem="3O1-Oj-dEa" secondAttribute="bottom" constant="8" id="doa-Kk-k2k"/>
+                                                    <constraint firstAttribute="bottom" secondItem="2ia-iY-MrT" secondAttribute="bottom" id="hDV-yq-EFf"/>
+                                                    <constraint firstAttribute="height" constant="164" id="kh4-Zq-AIl"/>
+                                                    <constraint firstAttribute="trailing" secondItem="3O1-Oj-dEa" secondAttribute="trailing" constant="8" id="mKI-U9-AMc"/>
+                                                    <constraint firstItem="BYN-kt-MhL" firstAttribute="leading" secondItem="geR-bT-suQ" secondAttribute="trailing" constant="8" id="n37-Lt-WAJ"/>
+                                                    <constraint firstItem="BYN-kt-MhL" firstAttribute="top" secondItem="R8k-g4-6mw" secondAttribute="top" constant="31" id="p7p-Jb-keG"/>
+                                                    <constraint firstItem="geR-bT-suQ" firstAttribute="leading" secondItem="R8k-g4-6mw" secondAttribute="leading" id="r0e-YB-AD7"/>
+                                                    <constraint firstItem="3O1-Oj-dEa" firstAttribute="top" secondItem="R8k-g4-6mw" secondAttribute="top" constant="8" id="rEZ-LI-1WJ"/>
                                                     <constraint firstItem="2ia-iY-MrT" firstAttribute="top" secondItem="BYN-kt-MhL" secondAttribute="bottom" constant="8" id="sTU-6g-3Gh"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
@@ -164,9 +181,12 @@
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <constraints>
+                                            <constraint firstItem="R8k-g4-6mw" firstAttribute="leading" secondItem="V7b-JA-YwG" secondAttribute="leading" constant="8" id="0dX-Ry-nqZ"/>
                                             <constraint firstAttribute="trailing" secondItem="R8k-g4-6mw" secondAttribute="trailing" constant="8" id="262-lL-dmJ"/>
                                             <constraint firstItem="R8k-g4-6mw" firstAttribute="leading" secondItem="V7b-JA-YwG" secondAttribute="leading" constant="8" id="6cJ-x1-xSP"/>
                                             <constraint firstAttribute="bottom" secondItem="R8k-g4-6mw" secondAttribute="bottom" constant="1328" id="9Sl-0i-svw"/>
+                                            <constraint firstItem="R8k-g4-6mw" firstAttribute="top" secondItem="V7b-JA-YwG" secondAttribute="top" constant="8" id="RIa-iF-CmA"/>
+                                            <constraint firstAttribute="trailing" secondItem="R8k-g4-6mw" secondAttribute="trailing" constant="8" id="cUs-9J-8FW"/>
                                             <constraint firstAttribute="height" constant="1500" id="gGt-fZ-GNj"/>
                                             <constraint firstItem="R8k-g4-6mw" firstAttribute="top" secondItem="V7b-JA-YwG" secondAttribute="top" constant="8" id="vkg-O9-E37"/>
                                         </constraints>
@@ -193,6 +213,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="1fG-lc-bh5"/>
                     <size key="freeformSize" width="414" height="896"/>
+                    <connections>
+                        <outlet property="qotdView" destination="R8k-g4-6mw" id="FCQ-VS-dvA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CdH-DD-tQz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -248,10 +271,11 @@
         </scene>
     </scenes>
     <resources>
-        <image name="heart" catalog="system" width="128" height="107"/>
-        <image name="house.fill" catalog="system" width="128" height="104"/>
-        <image name="magnifyingglass" catalog="system" width="128" height="117"/>
-        <image name="person" catalog="system" width="128" height="121"/>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="person" catalog="system" width="128" height="117"/>
+        <image name="placeholderImage" width="2268" height="4032"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
