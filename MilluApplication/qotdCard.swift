@@ -31,6 +31,9 @@ class qotdView: UIView {
       }
       
     var imgView : UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 126, height: 164))
+    var title : UILabel = UILabel(frame: CGRect(x: 130, y: 10, width: 256, height: 15))
+    var question : UILabel = UILabel(frame: CGRect(x: 130, y: 30, width: 256, height: 91))
+    var likeButton : UIButton = UIButton(frame: CGRect(x: 130, y: 130, width: 31, height: 34))
     
     
       //common func to init our view
@@ -45,6 +48,18 @@ class qotdView: UIView {
           imgView.layer.maskedCorners = [.layerMinXMinYCorner,.layerMinXMaxYCorner]
           imgView.clipsToBounds = true
           
+          addSubview(title)
+          title.text = "Question of the Day | September 25th"
+          title.adjustsFontSizeToFitWidth = true
+          
+          addSubview(question)
+          question.text = "If you had to cross a river, how would you do it?"
+          question.numberOfLines = 3
+          question.font = question.font.withSize(23)
+          question.adjustsFontSizeToFitWidth = true
+          addSubview(likeButton)
+          likeButton.setImage(UIImage(systemName: "heart"), for: UIControl.State.normal)
+
           
       }
     

@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
-        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -101,57 +100,10 @@
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R8k-g4-6mw" customClass="qotdView" customModule="MilluApplication" customModuleProvider="target">
                                                 <rect key="frame" x="8" y="8" width="398" height="164"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question of the Day  |  September 25th" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3O1-Oj-dEa">
-                                                        <rect key="frame" x="134" y="8" width="256" height="15"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="15" id="SS9-7l-gQV"/>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="15" id="Tr4-Bc-L9G"/>
-                                                            <constraint firstAttribute="width" constant="256" id="itS-de-TJD"/>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="256" id="vu9-5r-dxf"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you had to cross a river, how would you do it?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="4" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BYN-kt-MhL">
-                                                        <rect key="frame" x="134" y="31" width="256" height="91"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" constant="256" id="dfw-v6-mJa"/>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="91" id="doo-QP-osG"/>
-                                                            <constraint firstAttribute="height" constant="91" id="lvj-0E-BGV"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2ia-iY-MrT">
-                                                        <rect key="frame" x="134" y="130" width="31" height="34"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="31" id="78K-jg-KjD"/>
-                                                            <constraint firstAttribute="height" constant="34" id="BUq-sj-qcj"/>
-                                                            <constraint firstAttribute="width" constant="31" id="kZr-Wd-95n"/>
-                                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="rVw-0b-4cz"/>
-                                                        </constraints>
-                                                        <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="">
-                                                            <imageReference key="image" image="heart" catalog="system" symbolScale="large"/>
-                                                        </buttonConfiguration>
-                                                    </button>
-                                                </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="398" id="4PT-wL-fH0"/>
-                                                    <constraint firstItem="2ia-iY-MrT" firstAttribute="leading" secondItem="R8k-g4-6mw" secondAttribute="leading" constant="134" id="Ez3-6D-hZf"/>
-                                                    <constraint firstAttribute="trailing" secondItem="BYN-kt-MhL" secondAttribute="trailing" constant="8" id="ISD-tt-nm5"/>
-                                                    <constraint firstItem="BYN-kt-MhL" firstAttribute="top" secondItem="3O1-Oj-dEa" secondAttribute="bottom" constant="8" id="doa-Kk-k2k"/>
-                                                    <constraint firstAttribute="bottom" secondItem="2ia-iY-MrT" secondAttribute="bottom" id="hDV-yq-EFf"/>
                                                     <constraint firstAttribute="height" constant="164" id="kh4-Zq-AIl"/>
-                                                    <constraint firstAttribute="trailing" secondItem="3O1-Oj-dEa" secondAttribute="trailing" constant="8" id="mKI-U9-AMc"/>
-                                                    <constraint firstItem="BYN-kt-MhL" firstAttribute="top" secondItem="R8k-g4-6mw" secondAttribute="top" constant="31" id="p7p-Jb-keG"/>
-                                                    <constraint firstItem="3O1-Oj-dEa" firstAttribute="top" secondItem="R8k-g4-6mw" secondAttribute="top" constant="8" id="rEZ-LI-1WJ"/>
-                                                    <constraint firstItem="2ia-iY-MrT" firstAttribute="top" secondItem="BYN-kt-MhL" secondAttribute="bottom" constant="8" id="sTU-6g-3Gh"/>
                                                 </constraints>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -256,7 +208,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="heart" catalog="system" width="128" height="109"/>
         <image name="house.fill" catalog="system" width="128" height="106"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="person" catalog="system" width="128" height="117"/>
