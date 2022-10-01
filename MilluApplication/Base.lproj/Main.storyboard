@@ -68,10 +68,10 @@
             </objects>
             <point key="canvasLocation" x="-3797" y="745"/>
         </scene>
-        <!--View Controller-->
+        <!--Explore View Controller-->
         <scene sceneID="GoT-0o-rDT">
             <objects>
-                <viewController id="a42-12-xjb" sceneMemberID="viewController">
+                <viewController id="a42-12-xjb" customClass="exploreViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iC5-mE-eBL">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,43 +88,17 @@
         <scene sceneID="yoq-2u-kq4">
             <objects>
                 <viewController id="SjQ-Dv-eoB" customClass="homeViewController" customModule="MilluApplication" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="QcA-MH-f9i">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="QcA-MH-f9i">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fpa-lh-pwc">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fpa-lh-pwc">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V7b-JA-YwG">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V7b-JA-YwG">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R8k-g4-6mw" customClass="qotdView" customModule="MilluApplication" customModuleProvider="target">
-                                                <rect key="frame" x="27" y="125" width="361" height="164"/>
-                                                <color key="backgroundColor" red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="164" id="1yb-an-5PC"/>
-                                                </constraints>
-                                            </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Joseph H." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zHo-Ne-2Hw">
-                                                <rect key="frame" x="27" y="85" width="119" height="32"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="26"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Good Morning" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lXE-h6-dlw">
-                                                <rect key="frame" x="27" y="74" width="73" height="12"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="10"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="R8k-g4-6mw" secondAttribute="trailing" constant="26" id="fQA-Qs-G1H"/>
                                             <constraint firstAttribute="height" constant="1500" id="gGt-fZ-GNj"/>
-                                            <constraint firstItem="R8k-g4-6mw" firstAttribute="leading" secondItem="V7b-JA-YwG" secondAttribute="leading" constant="27" id="oyX-fw-lA1"/>
-                                            <constraint firstItem="R8k-g4-6mw" firstAttribute="top" secondItem="V7b-JA-YwG" secondAttribute="top" constant="125" id="wDf-Sw-dMa"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -150,7 +124,7 @@
                     <navigationItem key="navigationItem" id="1fG-lc-bh5"/>
                     <size key="freeformSize" width="414" height="896"/>
                     <connections>
-                        <outlet property="qotdView" destination="R8k-g4-6mw" id="FCQ-VS-dvA"/>
+                        <outlet property="scrollView" destination="V7b-JA-YwG" id="x85-hi-jYD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CdH-DD-tQz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
