@@ -36,9 +36,9 @@ class qotdView: UIView {
     
     //subviews to add
     var imgView : UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 126, height: 164))
-    var title : UILabel = UILabel(frame: CGRect(x: 130, y: 10, width: 200, height: 15))
-    var question : UILabel = UILabel(frame: CGRect(x: 130, y: 30, width: 200, height: 91))
-    var likeButton : UIButton = UIButton(frame: CGRect(x: 130, y: 130, width: 31, height: 34))
+    var title : UILabel = UILabel(frame: CGRect(x: 140, y: 10, width: 200, height: 15))
+    var question : UILabel = UILabel(frame: CGRect(x: 140, y: 30, width: 200, height: 91))
+    var likeButton : UIButton = UIButton(frame: CGRect(x: 130, y: 120, width: 31, height: 34))
     
     
       //common func to init our view
@@ -65,17 +65,19 @@ class qotdView: UIView {
           title.text = "Question of the Day | September 25th"
           title.adjustsFontSizeToFitWidth = true
           title.textColor = UIColor(named: "lightTextColor")
+          title.font = UIFont(name: "Jost-Regular", size: 10)
           
           //Question Subview
           addSubview(question)
           question.text = "If you had to cross a river, how would you do it?"
           question.numberOfLines = 3
-          question.font = question.font.withSize(20)
+          question.font = UIFont(name: "Jost-Regular", size: 20)
           question.adjustsFontSizeToFitWidth = true
           
           
           //Like Button Subview
           likeButton.setImage(UIImage(systemName: "heart"), for: UIControl.State.normal)
+          likeButton.tintColor = UIColor(named: "lightTextColor")
           addSubview(likeButton)
           
       }
