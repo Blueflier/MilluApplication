@@ -57,9 +57,12 @@ class ViewController: UIViewController {
     override func viewDidAppear( _ animated: Bool) {
         super.viewDidAppear(animated)
         
+        self.view.backgroundColor = UIColor(named: "videoBgColor")
+        
         let player=AVPlayer(url: URL(fileURLWithPath: Bundle.main.path(forResource: "milluLogo", ofType: ".m4v")!))
         let layer = AVPlayerLayer(player: player)
         layer.frame = view.bounds
+        layer.frame = CGRect(x: 0-view.bounds.width/2, y: 0-view.bounds.height/2, width: view.bounds.width*2, height: view.bounds.height*2)
         
         layer.videoGravity = .resizeAspect
         view.layer.addSublayer(layer)
