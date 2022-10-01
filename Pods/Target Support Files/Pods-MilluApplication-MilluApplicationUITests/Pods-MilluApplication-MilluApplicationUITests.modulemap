@@ -1,0 +1,6 @@
+framework module Pods_MilluApplication_MilluApplicationUITests {
+  umbrella header "Pods-MilluApplication-MilluApplicationUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -9,12 +9,18 @@ import UIKit
 import AVKit
 import AVFoundation
 import NotificationCenter
-
+import FirebaseDatabase
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let ref = Database.database() . reference()
+        ref.child("someid/name").setValue("Mike")
+        
+        
+        
     }
 //        // Do any additional setup after loading the view.
 //

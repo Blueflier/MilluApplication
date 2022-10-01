@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import FirebaseDatabase
 
 class homeViewController: UIViewController {
 
@@ -14,6 +15,8 @@ class homeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let ref = Database.database() . reference()
+        ref.child("someid/name").setValue("Mike")
     }
     
     override func viewDidAppear( _ animated: Bool) {
