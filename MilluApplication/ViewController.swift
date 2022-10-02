@@ -9,16 +9,14 @@ import UIKit
 import AVKit
 import AVFoundation
 import NotificationCenter
-import FirebaseDatabase
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let ref = Database.database() . reference()
-        ref.child("someid/name").setValue("Mike")
-        
+//        let ref = Database.database() . reference()
+//        ref.child("someid/name").setValue("Mike")
         
         
     }
@@ -55,6 +53,7 @@ class ViewController: UIViewController {
     
     //play the Millu logo <------------------ need one with new aspect ratio
     override func viewDidAppear( _ animated: Bool) {
+        let loggedIn = false;
         super.viewDidAppear(animated)
         
         self.view.backgroundColor = UIColor(named: "videoBgColor")
@@ -70,7 +69,12 @@ class ViewController: UIViewController {
         player.play()
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.5) {
-            self.performSegue(withIdentifier: "finishedPlayingVideo", sender: nil)
+            if(loggedIn){
+                self.performSegue(withIdentifier: "finishedPlayingVideo", sender: nil)
+            }
+            else{
+                self.performSegue(withIdentifier: "toLogin", sender: nil)
+            }
         }
         
     }

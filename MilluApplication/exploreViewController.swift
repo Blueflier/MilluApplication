@@ -10,21 +10,9 @@ import UIKit
 import FirebaseDatabase
 
 class exploreViewController: UIViewController {
-
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
-    
-    
     override func viewDidAppear(_ animated: Bool) {
-        
     }
-    
-   
-
-
-
 }

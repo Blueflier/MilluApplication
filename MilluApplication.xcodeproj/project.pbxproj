@@ -57,6 +57,7 @@
 		907C28EB28E7D4F10035D22E /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 907C28EA28E7D4F10035D22E /* FirebaseRemoteConfigSwift */; };
 		907C28ED28E7D4F10035D22E /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 907C28EC28E7D4F10035D22E /* FirebaseStorage */; };
 		907C28EF28E7D4F10035D22E /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 907C28EE28E7D4F10035D22E /* FirebaseStorageCombine-Community */; };
+		90A6B73A28E94EA70023950C /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90A6B73928E94EA70023950C /* loginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		9029F90D28C29CC1009E7819 /* MilluApplicationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilluApplicationUITests.swift; sourceTree = "<group>"; };
 		9029F90F28C29CC1009E7819 /* MilluApplicationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilluApplicationUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		907C28B728E7D2310035D22E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		90A6B73928E94EA70023950C /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -190,18 +192,19 @@
 			isa = PBXGroup;
 			children = (
 				1417A03728C2AE4100340C2D /* milluLogo.m4v */,
+				9029F8F228C29CC0009E7819 /* Main.storyboard */,
+				9029F8F028C29CC0009E7819 /* ViewController.swift */,
+				90A6B73928E94EA70023950C /* loginViewController.swift */,
+				14B5C17A28E769E800D31EFC /* homeViewController.swift */,
+				14570B8028E8F9BF007F4974 /* calendarView.swift */,
+				14570B7728E8C558007F4974 /* exploreViewController.swift */,
 				9029F8EC28C29CC0009E7819 /* AppDelegate.swift */,
 				9029F8EE28C29CC0009E7819 /* SceneDelegate.swift */,
-				9029F8F028C29CC0009E7819 /* ViewController.swift */,
 				14C5B19928CBC34700B173C6 /* templateCard.swift */,
 				14C5B19B28CBC73500B173C6 /* qotdCard.swift */,
 				14C5B19D28CBC7C000B173C6 /* activityCard.swift */,
-				14570B8028E8F9BF007F4974 /* calendarView.swift */,
 				14C5B19F28CBC8DB00B173C6 /* questionCard.swift */,
 				14C5B1A128CBC94900B173C6 /* cardPage.swift */,
-				9029F8F228C29CC0009E7819 /* Main.storyboard */,
-				14B5C17A28E769E800D31EFC /* homeViewController.swift */,
-				14570B7728E8C558007F4974 /* exploreViewController.swift */,
 				14570B7F28E8F69E007F4974 /* Jost Font */,
 				9029F8F528C29CC1009E7819 /* Assets.xcassets */,
 				9029F8F728C29CC1009E7819 /* LaunchScreen.storyboard */,
@@ -405,6 +408,7 @@
 				14C5B19E28CBC7C000B173C6 /* activityCard.swift in Sources */,
 				9029F8ED28C29CC0009E7819 /* AppDelegate.swift in Sources */,
 				9029F8EF28C29CC0009E7819 /* SceneDelegate.swift in Sources */,
+				90A6B73A28E94EA70023950C /* loginViewController.swift in Sources */,
 				14C5B19A28CBC34700B173C6 /* templateCard.swift in Sources */,
 				14570B7828E8C558007F4974 /* exploreViewController.swift in Sources */,
 				14C5B1A028CBC8DB00B173C6 /* questionCard.swift in Sources */,
