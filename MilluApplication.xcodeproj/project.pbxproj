@@ -179,6 +179,21 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		147EF68429163A8300DDF772 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				14570B8028E8F9BF007F4974 /* calendarView.swift */,
+				9029F8EC28C29CC0009E7819 /* AppDelegate.swift */,
+				9029F8EE28C29CC0009E7819 /* SceneDelegate.swift */,
+				14C5B19928CBC34700B173C6 /* templateCard.swift */,
+				14C5B19B28CBC73500B173C6 /* qotdCard.swift */,
+				14C5B19D28CBC7C000B173C6 /* activityCard.swift */,
+				14C5B19F28CBC8DB00B173C6 /* questionCard.swift */,
+				14C5B1A128CBC94900B173C6 /* cardPage.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		9029F8E028C29CC0009E7819 = {
 			isa = PBXGroup;
 			children = (
@@ -205,14 +220,7 @@
 				1417A03728C2AE4100340C2D /* milluLogo.m4v */,
 				9029F8F228C29CC0009E7819 /* Main.storyboard */,
 				14570B9628ED37FB007F4974 /* View Controllers */,
-				14570B8028E8F9BF007F4974 /* calendarView.swift */,
-				9029F8EC28C29CC0009E7819 /* AppDelegate.swift */,
-				9029F8EE28C29CC0009E7819 /* SceneDelegate.swift */,
-				14C5B19928CBC34700B173C6 /* templateCard.swift */,
-				14C5B19B28CBC73500B173C6 /* qotdCard.swift */,
-				14C5B19D28CBC7C000B173C6 /* activityCard.swift */,
-				14C5B19F28CBC8DB00B173C6 /* questionCard.swift */,
-				14C5B1A128CBC94900B173C6 /* cardPage.swift */,
+				147EF68429163A8300DDF772 /* Classes */,
 				14570B7F28E8F69E007F4974 /* Jost Font */,
 				9029F8F528C29CC1009E7819 /* Assets.xcassets */,
 				9029F8F728C29CC1009E7819 /* LaunchScreen.storyboard */,

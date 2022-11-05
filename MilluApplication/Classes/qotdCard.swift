@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import FirebaseDatabase
 
 //questionOfTheDay card which inherrits from templateCard
 
@@ -34,6 +35,10 @@ class qotdView: UIView {
         setupView()
       }
     
+    //Realtime Database stuff
+    var ref: DatabaseReference!
+
+    
     //subviews to add
     var imgView : UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 126, height: 164))
     var title : UILabel = UILabel(frame: CGRect(x: 140, y: 10, width: 200, height: 15))
@@ -43,6 +48,18 @@ class qotdView: UIView {
     
       //common func to init our view
       private func setupView() {
+          
+          //firebase database connection
+          var ref = Database.database().reference()
+          
+          //get date
+          var date = Date().formatted(date: .numeric, time: .omitted)
+          let remove: Set<Character> = ["/"]
+          date.removeAll(where: { remove.contains($0) })
+          
+          //I AM HERE - I NEED TO KEEP WORKING ON PULLING THE DATA
+          //I don't know how to pull it to here
+          print("\n\n\nHere: \(ref.child("/QuestionOfTheDay/1142022"))")
           
           //View configuration
           backgroundColor = .white
