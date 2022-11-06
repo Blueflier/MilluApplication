@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-import FirebaseDatabase
+import Firebase
 
 //questionOfTheDay card which inherrits from templateCard
 
@@ -50,7 +50,8 @@ class qotdView: UIView {
       private func setupView() {
           
           //firebase database connection
-          var ref = Database.database().reference()
+          let ref = Database.database().reference()
+          
           
           //get date
           var date = Date().formatted(date: .numeric, time: .omitted)
@@ -59,7 +60,9 @@ class qotdView: UIView {
           
           //I AM HERE - I NEED TO KEEP WORKING ON PULLING THE DATA
           //I don't know how to pull it to here
-          print("\n\n\nHere: \(ref.child("/QuestionOfTheDay/1142022"))")
+          
+          
+          
           
           //View configuration
           backgroundColor = .white
