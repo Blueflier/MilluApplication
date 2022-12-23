@@ -29,11 +29,11 @@ class qotdView: UIView {
         setupView()
     }
       
-      //initWithCode to init view from xib or storyboard
-      required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        setupView()
-      }
+   //initWithCode to init view from xib or storyboard
+   required init?(coder aDecoder: NSCoder) {
+     super.init(coder: aDecoder)
+     setupView()
+   }
     
     //Realtime Database stuff
     var ref: DatabaseReference!
@@ -49,15 +49,68 @@ class qotdView: UIView {
       //common func to init our view
       private func setupView() {
           
+          
+      //Months
+      let months = ["01": "January",
+                    "02": "Febrary",
+                    "03": "March",
+                    "04": "April",
+                    "05": "May",
+                    "06": "June",
+                    "07": "July",
+                    "08": "August",
+                    "09": "September",
+                    "10": "October",
+                    "11": "November",
+                    "12": "December"]
+      //Days
+      let days = ["01": "1st",
+                  "02": "2nd",
+                  "03": "3rd",
+                  "04": "4th",
+                  "05": "5th",
+                  "06": "6th",
+                  "07": "7th",
+                  "08": "8th",
+                  "09": "9th"]
+         
+          
+          
           //firebase database connection
           let ref = Database.database().reference()
           
           
           //get date
-          var date = Date().formatted(date: .numeric, time: .omitted)
-          let remove: Set<Character> = ["/"]
-          date.removeAll(where: { remove.contains($0) })
+          let date = Date().formatted(date: .numeric, time: .omitted)
           
+          // get month
+          let subMonth = date.prefix(2)
+          
+          //get the day from string
+          let start = date.index(date.startIndex, offsetBy: 3)
+          let end = date.index(date.startIndex, offsetBy: 5)
+          let range = start..<end
+          let subDayPre = date[range]
+          var subDay: String = ""
+          
+          // format the date using ordinal formatting
+          if (days.contains{ $0.value == subDayPre }) {
+              subDay = days[String(subDayPre)]!
+              print("found")
+          }
+          switch (subDayPre) {
+              case "21" , "31":
+                    subDay = subDayPre + ("st")
+              case "2" , "22":
+                    subDay = subDayPre + ("nd")
+              case "3" ,"23":
+                    subDay = subDayPre + ("rd")
+              default:
+                    subDay = subDayPre + ("th")
+            }
+          
+          
+         
           //I AM HERE - I NEED TO KEEP WORKING ON PULLING THE DATA
           //I don't know how to pull it to here
           
@@ -80,12 +133,31 @@ class qotdView: UIView {
           imgView.clipsToBounds = true
           addSubview(imgView)
           
+          
+          
+          
+          
           //Title subview
           addSubview(title)
-          title.text = "Question of the Day | September 25th"
           title.adjustsFontSizeToFitWidth = true
           title.textColor = UIColor(named: "lightTextColor")
           title.font = UIFont(name: "Jost-Regular", size: 10)
+                    
+          //Attributing title
+          let boldAttribute = [ NSAttributedString.Key.font: UIFont(name: "Jost-Medium", size: 10)! ]
+          let regularAttribute = [ NSAttributedString.Key.font: UIFont(name: "Jost-Regular", size: 10)! ]
+          let regularText = NSAttributedString(string: "Question of the Day · ", attributes: regularAttribute)
+          let boldText = NSAttributedString(string: String(months[String(subMonth)]!) + " " + subDay, attributes: boldAttribute)
+          let newString = NSMutableAttributedString()
+          newString.append(regularText)
+          newString.append(boldText)
+          
+          //Display title attribute here
+          title.attributedText = newString
+          
+          
+          
+          
           
           //Question Subview
           addSubview(question)

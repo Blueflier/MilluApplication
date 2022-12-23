@@ -79,20 +79,20 @@ class activityCardView: UIView {
         //conversation
         if (type == "conversation") {
             icon.image = UIImage(named: "conversationIcon")
-            iconBg.backgroundColor = UIColor(named: "lightBlue")
+            iconBg.backgroundColor = UIColor(named: "pink")
             titleLabel.text = "Conversation Starter"
 
         }
         //activity
         else if (type == "activity") {
             icon.image = UIImage(named: "activityIcon")
-            iconBg.backgroundColor = UIColor(named: "lightYellow")
+            iconBg.backgroundColor = UIColor(named: "blue")
             titleLabel.text = "Activity"
         }
         //storytime
         else if (type == "storytime") {
             icon.image = UIImage(named: "bookIcon")
-            iconBg.backgroundColor = UIColor(named: "lightPurple")
+            iconBg.backgroundColor = UIColor(named: "orange")
             titleLabel.text = "Storytime"
         }
         
