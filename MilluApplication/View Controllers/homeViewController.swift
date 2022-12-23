@@ -23,8 +23,7 @@ class homeViewController: UIViewController {
     let activityCard3 = activityCardView(frame: CGRect(x: 27, y: 550, width: 350, height: 80))
     var activitiesHeader : UILabel = UILabel(frame: CGRect(x: 30, y: 275, width: 250, height: 100))
     var calendarHeader : UILabel = UILabel(frame: CGRect(x: 30, y: 630, width: 250, height: 100))
-    
-    
+    var calendarDisplay = calendarView(frame: CGRect(x: 27, y: 700, width: 350, height: 164))
     
     //When view loads...
     override func viewDidLoad() {
@@ -92,6 +91,8 @@ class homeViewController: UIViewController {
         calendarHeader.text = "Your Calendar"
         calendarHeader.font = UIFont(name: "Jost-Medium", size: 25)
         scrollView.addSubview(calendarHeader)
+        
+        scrollView.addSubview(calendarDisplay)
         
     }
     

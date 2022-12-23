@@ -7,10 +7,17 @@
 
 import Foundation
 import UIKit
- 
+import UICalendarView
+
+
+
+
 
 
 class calendarView : UIView {
+    
+    
+    
     
     
     override init(frame: CGRect) {
@@ -24,9 +31,32 @@ class calendarView : UIView {
         setupView()
     }
     
-   
+    
+    
+
     
     private func setupView() {
+        
+        
+        
+        let calendarView = UICalendarView()
+        let gregorianCalendar = Calendar(identifier: .gregorian)
+        calendarView.calendar = gregorianCalendar
+        
+        //View configuration
+        backgroundColor = .white
+        layer.cornerRadius = 13
+        layer.shadowColor = UIColor.black.cgColor
+        layer.shadowOpacity = 0.1
+        layer.shadowOffset = CGSize(width: -1, height: 1)
+        layer.shadowRadius = 10
+        
+        
+        
+        
+        
+        
+        
         
         backgroundColor = .white
         

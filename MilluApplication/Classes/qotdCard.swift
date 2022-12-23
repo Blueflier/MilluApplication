@@ -111,9 +111,8 @@ class qotdView: UIView {
           
           
          
-          //I AM HERE - I NEED TO KEEP WORKING ON PULLING THE DATA
+          //I AM HERE - I NEED TO KEEP WORKING ON PULLING THE DATA FOR THE QUESTION
           //I don't know how to pull it to here
-          
           
           
           
