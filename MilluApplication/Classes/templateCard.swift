@@ -20,7 +20,7 @@ class templateCard {
     var devAge: Int     //int for reccomended age
     
     init() {
-        picture = UIImage(named: "test")!   //not a real image yet <----- need to fix this
+        picture = UIImage(named: "bgnice")!   //not a real image yet <----- need to fix this
         title = ""                          //initializes to no title
         question = ""                       //initializes to no question
         liked = false                       //initializes to not liked

@@ -29,8 +29,8 @@ class homeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //connect to database
-        let ref = Database.database() . reference()
-        ref.child("someid/name").setValue("Mike")
+//        let ref = Database.database() . reference()
+//        ref.child("someid/name").setValue("Mike")
     }
     
     
