@@ -7,14 +7,13 @@
 
 import Foundation
 import UIKit
-import UICalendarView
 
 
 
 
 
 
-class calendarView : UIView {
+class calendarView : UICalendarView {
     
     
     
@@ -39,9 +38,11 @@ class calendarView : UIView {
         
         
         
-        let calendarView = UICalendarView()
-        let gregorianCalendar = Calendar(identifier: .gregorian)
-        calendarView.calendar = gregorianCalendar
+        // calendar settings
+        calendar = Calendar(identifier: .gregorian)
+        fontDesign = .rounded
+        tintColor = UIColor(named: "blue")
+        availableDateRange = DateInterval(start: .distantPast, end: .distantFuture)
         
         //View configuration
         backgroundColor = .white
@@ -50,7 +51,6 @@ class calendarView : UIView {
         layer.shadowOpacity = 0.1
         layer.shadowOffset = CGSize(width: -1, height: 1)
         layer.shadowRadius = 10
-        
         
         
         
