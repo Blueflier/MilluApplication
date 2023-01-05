@@ -39,9 +39,12 @@ class questionCardView: UIView {
     }
     
     //subviews to add
-    var image: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 150, height: 75))
+    var image: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 200, height: 110))
     //var iconBg: UIView = UIView(frame: CGRect(x: 20, y: 15, width: 50, height: 50))
-    //var titleLabel: UILabel = UILabel(frame: CGRect(x: 75, y: 5, width: 200, height: 50))
+    var titleLabel: UILabel = UILabel(frame: CGRect(x: 10, y: 105, width: 200, height: 50))
+    var questionLabel: UILabel = UILabel(frame: CGRect(x: 10, y: 150, width: 200, height: 50))
+    var ageLabel: UILabel = UILabel(frame: CGRect(x: 10, y: 250, width: 200, height: 50))
+
    // var timeLabel: UILabel = UILabel(frame: CGRect(x: 75, y: 25, width: 200, height: 50))
     
     
@@ -62,13 +65,28 @@ class questionCardView: UIView {
     
     
     func addSubviews() {
-        // 150 wide 200 tall
+        // 150 wide 250 tall
         
-        image.image = UIImage(named: "bgnice")
+        image.image = UIImage(named: "placeholderImage")
+        
         image.layoutIfNeeded()
-        image.layer.cornerRadius = image.frame.size.width * 0.1
+        image.layer.cornerRadius = 13//image.frame.size.width * 0.05
         image.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         image.clipsToBounds = true
         addSubview(image)
+        
+        
+        titleLabel.text = "Inventing Clothes"
+        titleLabel.font = UIFont(name: "Jost-Medium", size: 20)
+        addSubview(titleLabel)
+        
+        questionLabel.text = "How could you make clothes better?"
+        questionLabel.font = UIFont(name: "Jost-Regular", size: 15)
+        questionLabel.numberOfLines = 3
+        addSubview(questionLabel)
+        
+        ageLabel.text = "Ages 5+"
+        ageLabel.font = UIFont(name: "Jost-ExtraLight", size: 15)
+        addSubview(ageLabel)
     }
 }
