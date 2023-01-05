@@ -51,15 +51,15 @@ class qotdView: UIView {
           
           
       //Months
-      let months = ["01": "January",
-                    "02": "Febrary",
-                    "03": "March",
-                    "04": "April",
-                    "05": "May",
-                    "06": "June",
-                    "07": "July",
-                    "08": "August",
-                    "09": "September",
+      let months = ["1": "January",
+                    "2": "Febrary",
+                    "3": "March",
+                    "4": "April",
+                    "5": "May",
+                    "6": "June",
+                    "7": "July",
+                    "8": "August",
+                    "9": "September",
                     "10": "October",
                     "11": "November",
                     "12": "December"]
@@ -83,21 +83,32 @@ class qotdView: UIView {
           //get date
           let date = Date().formatted(date: .numeric, time: .omitted)
           
-          // get month
-          let subMonth = date.prefix(2)
-          
           //get the day from string
-          let start = date.index(date.startIndex, offsetBy: 3)
-          let end = date.index(date.startIndex, offsetBy: 5)
-          let range = start..<end
-          let subDayPre = date[range]
+          var start = date.index(date.startIndex, offsetBy: 3)
+          var end = date.index(date.startIndex, offsetBy: 5)
+          var range = start..<end
+          var subDayPre = date[range]
           var subDay: String = ""
+          
+          // get month
+          var subMonth = date.prefix(2)
+          //check if month is less than 10 (i.e. only one digit
+          if subMonth.contains("/") {
+              subMonth = subMonth.dropLast(1)
+              //get the day from string
+               start = date.index(date.startIndex, offsetBy: 2)
+               end = date.index(date.startIndex, offsetBy: 4)
+               range = start..<end
+               subDayPre = date[range]
+               subDay = ""
+          }
+          
           
           // format the date using ordinal formatting
           if (days.contains{ $0.value == subDayPre }) {
               subDay = days[String(subDayPre)]!
-              print("found")
           }
+          
           switch (subDayPre) {
               case "21" , "31":
                     subDay = subDayPre + ("st")
@@ -109,6 +120,10 @@ class qotdView: UIView {
                     subDay = subDayPre + ("th")
             }
           
+          // ensure date does not contain "/"
+          if subDay.contains("/") {
+              subDay = subDay.replacingOccurrences(of: "/", with: "")
+          }
           
          
           //I AM HERE - I NEED TO KEEP WORKING ON PULLING THE DATA FOR THE QUESTION
