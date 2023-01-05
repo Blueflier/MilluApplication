@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>848742910697-he8q3sctoskmolfb1ii8ipd2pbdpn0c7.apps.googleusercontent.com</string>
+	<string>95592578464-75g0c9a2s26462ag15u9duds60f1t8n7.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.848742910697-he8q3sctoskmolfb1ii8ipd2pbdpn0c7</string>
+	<string>com.googleusercontent.apps.95592578464-75g0c9a2s26462ag15u9duds60f1t8n7</string>
 	<key>API_KEY</key>
-	<string>AIzaSyD7m_I76tLTcoSmKec-iUDAaaNZj9I6HqI</string>
+	<string>AIzaSyBxjimdjIaeB3MOZTJOmpZAlpZkoAotEiU</string>
 	<key>GCM_SENDER_ID</key>
-	<string>848742910697</string>
+	<string>95592578464</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
 	<string>jio.osephhartono.MilluApplication</string>
 	<key>PROJECT_ID</key>
-	<string>milluapplication-bba18</string>
+	<string>milluapplication</string>
 	<key>STORAGE_BUCKET</key>
-	<string>milluapplication-bba18.appspot.com</string>
+	<string>milluapplication.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -29,6 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:848742910697:ios:e93e8386bc991fc6057e78</string>
+	<string>1:95592578464:ios:8706e7e4d9f33b2aa778c5</string>
+	<key>DATABASE_URL</key>
+	<string>https://milluapplication-default-rtdb.firebaseio.com</string>
 </dict>
 </plist>

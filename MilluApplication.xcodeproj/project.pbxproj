@@ -13,6 +13,7 @@
 		14570B7C28E8F67C007F4974 /* Jost-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14570B7B28E8F67C007F4974 /* Jost-Medium.ttf */; };
 		14570B7E28E8F695007F4974 /* Jost-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 14570B7D28E8F695007F4974 /* Jost-ExtraLight.ttf */; };
 		14570B8128E8F9BF007F4974 /* calendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14570B8028E8F9BF007F4974 /* calendarView.swift */; };
+		149F607A296779B100E63B0B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 149F6079296779B100E63B0B /* GoogleService-Info.plist */; };
 		14B5C17B28E769E800D31EFC /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B5C17A28E769E800D31EFC /* homeViewController.swift */; };
 		14C5B19A28CBC34700B173C6 /* templateCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C5B19928CBC34700B173C6 /* templateCard.swift */; };
 		14C5B19C28CBC73500B173C6 /* qotdCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C5B19B28CBC73500B173C6 /* qotdCard.swift */; };
@@ -28,9 +29,6 @@
 		9029F90428C29CC1009E7819 /* MilluApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9029F90328C29CC1009E7819 /* MilluApplicationTests.swift */; };
 		9029F90E28C29CC1009E7819 /* MilluApplicationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9029F90D28C29CC1009E7819 /* MilluApplicationUITests.swift */; };
 		9029F91028C29CC1009E7819 /* MilluApplicationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9029F90F28C29CC1009E7819 /* MilluApplicationUITestsLaunchTests.swift */; };
-		907C28B828E7D2320035D22E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 907C28B728E7D2310035D22E /* GoogleService-Info.plist */; };
-		907C28B928E7D2320035D22E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 907C28B728E7D2310035D22E /* GoogleService-Info.plist */; };
-		907C28BA28E7D2320035D22E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 907C28B728E7D2310035D22E /* GoogleService-Info.plist */; };
 		907C28BD28E7D4F10035D22E /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 907C28BC28E7D4F10035D22E /* FirebaseAnalytics */; };
 		907C28BF28E7D4F10035D22E /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 907C28BE28E7D4F10035D22E /* FirebaseAnalyticsOnDeviceConversion */; };
 		907C28C128E7D4F10035D22E /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 907C28C028E7D4F10035D22E /* FirebaseAnalyticsSwift */; };
@@ -84,6 +82,7 @@
 		14570B7B28E8F67C007F4974 /* Jost-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-Medium.ttf"; sourceTree = "<group>"; };
 		14570B7D28E8F695007F4974 /* Jost-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Jost-ExtraLight.ttf"; sourceTree = "<group>"; };
 		14570B8028E8F9BF007F4974 /* calendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = calendarView.swift; sourceTree = "<group>"; };
+		149F6079296779B100E63B0B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		14B5C17A28E769E800D31EFC /* homeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
 		14C5B19928CBC34700B173C6 /* templateCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = templateCard.swift; sourceTree = "<group>"; };
 		14C5B19B28CBC73500B173C6 /* qotdCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = qotdCard.swift; sourceTree = "<group>"; };
@@ -103,7 +102,6 @@
 		9029F90928C29CC1009E7819 /* MilluApplicationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MilluApplicationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9029F90D28C29CC1009E7819 /* MilluApplicationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilluApplicationUITests.swift; sourceTree = "<group>"; };
 		9029F90F28C29CC1009E7819 /* MilluApplicationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilluApplicationUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		907C28B728E7D2310035D22E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		90A6B73928E94EA70023950C /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -223,9 +221,9 @@
 				147EF68429163A8300DDF772 /* Classes */,
 				14570B7F28E8F69E007F4974 /* Jost Font */,
 				9029F8F528C29CC1009E7819 /* Assets.xcassets */,
+				149F6079296779B100E63B0B /* GoogleService-Info.plist */,
 				9029F8F728C29CC1009E7819 /* LaunchScreen.storyboard */,
 				9029F8FA28C29CC1009E7819 /* Info.plist */,
-				907C28B728E7D2310035D22E /* GoogleService-Info.plist */,
 			);
 			path = MilluApplication;
 			sourceTree = "<group>";
@@ -383,10 +381,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				14570B7E28E8F695007F4974 /* Jost-ExtraLight.ttf in Resources */,
+				149F607A296779B100E63B0B /* GoogleService-Info.plist in Resources */,
 				1417A03828C2AF5D00340C2D /* milluLogo.m4v in Resources */,
 				9029F8F928C29CC1009E7819 /* LaunchScreen.storyboard in Resources */,
 				14570B7C28E8F67C007F4974 /* Jost-Medium.ttf in Resources */,
-				907C28B828E7D2320035D22E /* GoogleService-Info.plist in Resources */,
 				9029F8F628C29CC1009E7819 /* Assets.xcassets in Resources */,
 				9029F8F428C29CC0009E7819 /* Main.storyboard in Resources */,
 				14570B7A28E8F661007F4974 /* Jost-Regular.ttf in Resources */,
@@ -397,7 +395,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				907C28B928E7D2320035D22E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,7 +402,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				907C28BA28E7D2320035D22E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
