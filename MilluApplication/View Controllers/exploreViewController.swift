@@ -238,6 +238,7 @@ class exploreViewController: UIViewController {
         ])
         
         // temp subs
+        reccommended7.titleLabel.text = "Selfless Wish"
         newScrollContainer.addSubview(reccommended7)
         newScrollContainer.addSubview(reccommended8)
         newScrollContainer.addSubview(reccommended9)

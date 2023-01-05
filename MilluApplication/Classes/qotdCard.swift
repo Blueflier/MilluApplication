@@ -22,8 +22,13 @@ class questionOfTheDay: templateCard {
 }
 
 
+var ref: DatabaseReference!
+
+
 class qotdView: UIView {
 
+    
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -35,9 +40,7 @@ class qotdView: UIView {
      setupView()
    }
     
-    //Realtime Database stuff
-    var ref: DatabaseReference!
-
+    
     
     //subviews to add
     var imgView : UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 126, height: 164))
@@ -50,29 +53,42 @@ class qotdView: UIView {
       private func setupView() {
           
           
-      //Months
-      let months = ["1": "January",
-                    "2": "Febrary",
-                    "3": "March",
-                    "4": "April",
-                    "5": "May",
-                    "6": "June",
-                    "7": "July",
-                    "8": "August",
-                    "9": "September",
-                    "10": "October",
-                    "11": "November",
-                    "12": "December"]
-      //Days
-      let days = ["01": "1st",
-                  "02": "2nd",
-                  "03": "3rd",
-                  "04": "4th",
-                  "05": "5th",
-                  "06": "6th",
-                  "07": "7th",
-                  "08": "8th",
-                  "09": "9th"]
+          //Realtime Database stuff
+          ref = Database.database().reference()
+          
+//          ref.child("QuestionOfTheDay/1142022/Question").observeSingleEvent(of: .value, with: { snapshot in
+//              guard let value = snapshot.value as? [String: Any] else {
+//                  print("hmm err here ^")
+//                  return
+//
+//              }
+//              print("VALUE:::: \(value)")
+//          })
+          
+          
+          //Months
+          let months = ["1": "January",
+                        "2": "Febrary",
+                        "3": "March",
+                        "4": "April",
+                        "5": "May",
+                        "6": "June",
+                        "7": "July",
+                        "8": "August",
+                        "9": "September",
+                        "10": "October",
+                        "11": "November",
+                        "12": "December"]
+          //Days
+          let days = ["01": "1st",
+                      "02": "2nd",
+                      "03": "3rd",
+                      "04": "4th",
+                      "05": "5th",
+                      "06": "6th",
+                      "07": "7th",
+                      "08": "8th",
+                      "09": "9th"]
          
           
           
