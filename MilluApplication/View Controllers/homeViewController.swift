@@ -30,7 +30,7 @@ class homeViewController: UIViewController {
         super.viewDidLoad()
         //connect to database
         let ref = Database.database() . reference()
-        ref.child("someid/name").setValue("Mike")
+        //ref.child("someid/name").setValue("Mike")
     }
     
     

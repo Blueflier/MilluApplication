@@ -56,14 +56,25 @@ class qotdView: UIView {
           //Realtime Database stuff
           ref = Database.database().reference()
           
-//          ref.child("QuestionOfTheDay/1142022/Question").observeSingleEvent(of: .value, with: { snapshot in
-//              guard let value = snapshot.value as? [String: Any] else {
-//                  print("hmm err here ^")
-//                  return
-//
-//              }
-//              print("VALUE:::: \(value)")
-//          })
+          //get date
+          let date = Date().formatted(date: .numeric, time: .omitted)
+          
+          let findDate = date.replacingOccurrences(of: "/", with: "")
+          
+          ref.child("QuestionOfTheDay/\(findDate)").observeSingleEvent(of: .value, with: { snapshot in
+              guard let value = snapshot.value as? [String: Any] else {
+                  print("hmm err here ^")
+                  return
+
+              }
+              for item in value {
+                  if (item.key == "Question") {
+                      self.question.text = item.value as! String
+                  }
+                  
+              }
+          })
+          
           
           
           //Months
@@ -95,10 +106,7 @@ class qotdView: UIView {
           //firebase database connection
           let ref = Database.database().reference()
           
-          
-          //get date
-          let date = Date().formatted(date: .numeric, time: .omitted)
-          
+                    
           //get the day from string
           var start = date.index(date.startIndex, offsetBy: 3)
           var end = date.index(date.startIndex, offsetBy: 5)
@@ -191,7 +199,9 @@ class qotdView: UIView {
           
           //Question Subview
           addSubview(question)
-          question.text = "If you had to cross a river, how would you do it?"
+          if (question.text == "") {
+              question.text = "If you had to cross a river, how would you do it?"
+          }
           question.numberOfLines = 3
           question.font = UIFont(name: "Jost-Regular", size: 20)
           question.adjustsFontSizeToFitWidth = true
