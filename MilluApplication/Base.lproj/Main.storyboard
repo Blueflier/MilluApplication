@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rdI-fA-z7C">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -21,7 +21,7 @@
                     <navigationItem key="navigationItem" id="zwx-X6-THo"/>
                     <connections>
                         <segue destination="rdI-fA-z7C" kind="presentation" identifier="finishedPlayingVideo" animates="NO" modalPresentationStyle="fullScreen" id="EyT-8q-1Si"/>
-                        <segue destination="r2t-1w-Dob" kind="presentation" identifier="toLogin" modalPresentationStyle="fullScreen" id="iLE-Fz-SZ8"/>
+                        <segue destination="r2t-1w-Dob" kind="presentation" identifier="toLogin" animates="NO" modalPresentationStyle="fullScreen" id="iLE-Fz-SZ8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
