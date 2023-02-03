@@ -38,10 +38,13 @@
                         <viewLayoutGuide key="safeArea" id="8PT-ad-yPK"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <segue destination="rdI-fA-z7C" kind="presentation" identifier="loginSuccessful" animates="NO" modalPresentationStyle="fullScreen" id="eKx-Hm-noD"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z5t-HR-wOA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3710" y="-704"/>
+            <point key="canvasLocation" x="-3743" y="-708"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="0uG-vf-re1">
@@ -88,14 +91,14 @@
         <scene sceneID="yoq-2u-kq4">
             <objects>
                 <viewController id="SjQ-Dv-eoB" customClass="homeViewController" customModule="MilluApplication" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="QcA-MH-f9i">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="QcA-MH-f9i">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fpa-lh-pwc">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fpa-lh-pwc">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V7b-JA-YwG">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V7b-JA-YwG">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="1500" id="gGt-fZ-GNj"/>
@@ -227,6 +230,9 @@
             <point key="canvasLocation" x="-3797.1014492753625" y="1465.8482142857142"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="eKx-Hm-noD"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="house.fill" catalog="system" width="128" height="104"/>
         <image name="magnifyingglass" catalog="system" width="128" height="117"/>

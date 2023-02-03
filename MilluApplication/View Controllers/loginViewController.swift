@@ -6,8 +6,15 @@
 //
 
 import SwiftUI
+import FirebaseDatabase
+import FirebaseCore
+import FirebaseFirestore
+import FirebaseAuth
 
 class loginViewController: UIViewController {
+    
+    //FirebaseApp.configure()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -47,6 +54,31 @@ class loginViewController: UIViewController {
         return temp;
     }
     
+    var loginButton: UIButton {
+        let btn = UIButton()
+        btn.frame = CGRect(x: 100, y: 100, width: 100, height: 50)
+        btn.backgroundColor = UIColor.blue
+        btn.setTitle("Test Button", for: .normal)
+        btn.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        return btn
+    }
+
+//    var ref: DatabaseReference!
+
+    var ref = Database.database().reference()
+    
+    @objc func buttonAction(sender: UIButton!) {
+        
+//        if(success()){
+            self.performSegue(withIdentifier: "loginSuccessful", sender: nil)
+
+//        }
+//        else{
+//
+//        }
+        print("Button tapped")
+    }
+    
    
     
 
@@ -54,5 +86,7 @@ class loginViewController: UIViewController {
         view.addSubview(logo)
         view.addSubview(userName)
         view.addSubview(password)
+        self.view.addSubview(loginButton)
+
     }
 }
