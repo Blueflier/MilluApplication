@@ -17,19 +17,19 @@ class homeViewController: UIViewController {
     //subviews to add
     var welcomeLabel : UILabel = UILabel(frame: CGRect(x: 30, y: 15, width: 200, height: 100))
     var usernameLabel : UILabel = UILabel(frame: CGRect(x: 30, y: 35, width: 300, height: 100))
-    let qotdCard = qotdView(frame: CGRect(x: 27, y: 115, width: 350, height: 164))
-    let activityCard1 = activityCardView(frame: CGRect(x: 27, y: 350, width: 350, height: 80))
-    let activityCard2 = activityCardView(frame: CGRect(x: 27, y: 450, width: 350, height: 80))
-    let activityCard3 = activityCardView(frame: CGRect(x: 27, y: 550, width: 350, height: 80))
+    let qotdCard = qotdView(frame: CGRect(x: UIScreen.main.bounds.size.width / 2 - 175, y: 115, width: 350, height: 164))
+    let activityCard1 = activityCardView(frame: CGRect(x: UIScreen.main.bounds.size.width / 2 - 175, y: 350, width: 350, height: 80))
+    let activityCard2 = activityCardView(frame: CGRect(x: UIScreen.main.bounds.size.width / 2 - 175, y: 450, width: 350, height: 80))
+    let activityCard3 = activityCardView(frame: CGRect(x: UIScreen.main.bounds.size.width / 2 - 175, y: 550, width: 350, height: 80))
     var activitiesHeader : UILabel = UILabel(frame: CGRect(x: 30, y: 275, width: 250, height: 100))
     var calendarHeader : UILabel = UILabel(frame: CGRect(x: 30, y: 630, width: 250, height: 100))
-    var calendarDisplay = calendarView(frame: CGRect(x: 27, y: 700, width: 350, height: 300))
+    var calendarDisplay = calendarView(frame: CGRect(x: UIScreen.main.bounds.size.width / 2 - 175, y: 700, width: 350, height: 300))
     
     //When view loads...
     override func viewDidLoad() {
         super.viewDidLoad()
         //connect to database
-        let ref = Database.database() . reference()
+        //let ref = Database.database() . reference()
         //ref.child("someid/name").setValue("Mike")
     }
     

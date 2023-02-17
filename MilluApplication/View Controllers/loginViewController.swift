@@ -55,17 +55,28 @@ class loginViewController: UIViewController {
     }
     
     var loginButton: UIButton {
+        let w = 200;
+        let h = 50;
         let btn = UIButton()
-        btn.frame = CGRect(x: 100, y: 100, width: 100, height: 50)
+        
+
+        
+        btn.frame = CGRect(
+            x: Int(UIScreen.main.bounds.width)/2-100,
+            y: 450,
+            width: w, height: h)
+        //btn.size = CGSizeMake(150, 70);
+
         btn.backgroundColor = UIColor.blue
-        btn.setTitle("Test Button", for: .normal)
+        btn.setTitle("Play", for: .normal)
         btn.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
         return btn
+        //CGRect(x: self.view.frame.size.width/2 - button.frame.size.width/2, y: self.view.frame.size.height/2 - button.frame.size.height/2, width: button.frame.width, height: button.frame.height)
     }
 
 //    var ref: DatabaseReference!
 
-    var ref = Database.database().reference()
+    //var ref = Database.database().reference()
     
     @objc func buttonAction(sender: UIButton!) {
         
