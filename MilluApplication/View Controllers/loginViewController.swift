@@ -73,6 +73,22 @@ class loginViewController: UIViewController {
         return btn
         //CGRect(x: self.view.frame.size.width/2 - button.frame.size.width/2, y: self.view.frame.size.height/2 - button.frame.size.height/2, width: button.frame.width, height: button.frame.height)
     }
+    var createAccountButton: UIButton {
+
+        let btn = UIButton()
+        
+
+        
+        btn.setTitleColor(.blue, for: .normal)
+
+
+        btn.setTitle("create account", for: .normal)
+        btn.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        return btn
+//        CGRect(x: self.view.frame.size.width/2 - button.frame.size.width/2, y: self.view.frame.size.height/2 - button.frame.size.height/2, width: button.frame.width, height: button.frame.height)
+    }
+    
+    
 
 //    var ref: DatabaseReference!
 
@@ -98,6 +114,7 @@ class loginViewController: UIViewController {
         view.addSubview(userName)
         view.addSubview(password)
         self.view.addSubview(loginButton)
+        self.view.addSubview(createAccountButton)
 
     }
 }
