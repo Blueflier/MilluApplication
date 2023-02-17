@@ -134,7 +134,7 @@ class qotdView: UIView {
           }
           
           switch (subDayPre) {
-              case "21" , "31":
+              case "1", "21", "31":
                     subDay = subDayPre + ("st")
               case "2" , "22":
                     subDay = subDayPre + ("nd")
