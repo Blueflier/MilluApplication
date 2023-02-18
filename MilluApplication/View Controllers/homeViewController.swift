@@ -34,6 +34,11 @@ class homeViewController: UIViewController, UIScrollViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         qotdScrollView.delegate = self
+        slides = createSlides()
+        setupSlideScrollView(slides: slides)
+        pageControl.numberOfPages = slides.count
+        pageControl.currentPage = 0
+        view.bringSubviewToFront(pageControl)
         //connect to database
         //let ref = Database.database() . reference()
         //ref.child("someid/name").setValue("Mike")
@@ -48,13 +53,12 @@ class homeViewController: UIViewController, UIScrollViewDelegate{
         view.backgroundColor = UIColor(named: "backgroundColor")
         
         //setup qotd scroll view
-        slides = createSlides()
-        setupSlideScrollView(slides: slides)
-        view.addSubview(pageControl)
+       
         setupQOTDCarousel()
         pageControl.numberOfPages = slides.count
         pageControl.currentPage = 0
         view.bringSubviewToFront(pageControl)
+        qotdScrollView.addSubview(pageControl)
         
         //Added qotd card
         scrollView.addSubview(qotdCard)
@@ -121,9 +125,9 @@ class homeViewController: UIViewController, UIScrollViewDelegate{
         qotdScrollView.layer.opacity = 0.5
         
         qotdScrollView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        qotdScrollView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
+        qotdScrollView.widthAnchor.constraint(equalToConstant: 350).isActive = true
         qotdScrollView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
-        qotdScrollView.heightAnchor.constraint(equalToConstant: 500).isActive = true
+        qotdScrollView.heightAnchor.constraint(equalToConstant: 164).isActive = true
         
     }
     
@@ -131,24 +135,25 @@ class homeViewController: UIViewController, UIScrollViewDelegate{
     
     func createSlides() -> [qotdView] {
         
-        var qotdView1 = qotdCard
+        var qotdView1 = qotdView(frame: CGRect(x: UIScreen.main.bounds.size.width / 2 - 175, y: 115, width: 350, height: 164))
         qotdView1.title.text = "TITLE 1"
-        var qotdView2 = qotdCard
+        var qotdView2 = qotdView(frame: CGRect(x: UIScreen.main.bounds.size.width / 2 - 175, y: 115, width: 350, height: 164))
         qotdView2.title.text = "TITLE 2"
-        var qotdView3 = qotdCard
+        var qotdView3 = qotdView(frame: CGRect(x: UIScreen.main.bounds.size.width / 2 - 175, y: 115, width: 350, height: 164))
         qotdView3.title.text = "TITLE 3"
         
         return [qotdView1, qotdView2, qotdView3]
     }
     
     func setupSlideScrollView(slides : [qotdView]) {
-            qotdScrollView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: view.frame.height)
+            qotdScrollView.frame = CGRect(x: UIScreen.main.bounds.size.width / 2 - 175, y: 115, width: 350, height: 164)
         qotdScrollView.contentSize = CGSize(width: view.frame.width * CGFloat(slides.count), height: view.frame.height)
         qotdScrollView.isPagingEnabled = true
             
             for i in 0 ..< slides.count {
                 slides[i].frame = CGRect(x: view.frame.width * CGFloat(i), y: 0, width: view.frame.width, height: view.frame.height)
                 qotdScrollView.addSubview(slides[i])
+                print("added \(slides[i].title)")
             }
         }
     
@@ -162,16 +167,8 @@ class homeViewController: UIViewController, UIScrollViewDelegate{
         
         scrollView.showsHorizontalScrollIndicator = false
         scrollView.showsVerticalScrollIndicator = false
-        
-        let maximumHorizontalOffset: CGFloat = scrollView.contentSize.width - scrollView.frame.width
-        let currentHorizontalOffset: CGFloat = scrollView.contentOffset.x
-        
-        // vertical
-        let maximumVerticalOffset: CGFloat = scrollView.contentSize.height - scrollView.frame.height
-        let currentVerticalOffset: CGFloat = scrollView.contentOffset.y
-        
-        let percentageHorizontalOffset: CGFloat = currentHorizontalOffset / maximumHorizontalOffset
-        let percentageVerticalOffset: CGFloat = currentVerticalOffset / maximumVerticalOffset
+//
+//
     }
 
     
