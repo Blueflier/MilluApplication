@@ -158,10 +158,10 @@ class qotdView: UIView {
           //View configuration
           backgroundColor = .white
           layer.cornerRadius = 13
-          layer.shadowColor = UIColor.black.cgColor
-          layer.shadowOpacity = 0.1
-          layer.shadowOffset = CGSize(width: -1, height: 1)
-          layer.shadowRadius = 10
+//          layer.shadowColor = UIColor.black.cgColor
+//          layer.shadowOpacity = 0.1
+//          layer.shadowOffset = CGSize(width: -1, height: 1)
+//          layer.shadowRadius = 10
         
           //Image view subview
           imgView.image = UIImage(named: "placeholderImage")

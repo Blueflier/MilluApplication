@@ -18,16 +18,15 @@ class homeViewController: UIViewController, UIScrollViewDelegate{
     //subviews to add
     var welcomeLabel : UILabel = UILabel(frame: CGRect(x: 30, y: 15, width: 200, height: 100))
     var usernameLabel : UILabel = UILabel(frame: CGRect(x: 30, y: 35, width: 300, height: 100))
-    //let qotdCard = qotdView(frame: CGRect(x: UIScreen.main.bounds.size.width / 2 - 175, y: 115, width: 350, height: 164))
     let activityCard1 = activityCardView(frame: CGRect(x: UIScreen.main.bounds.size.width / 2 - 175, y: 350, width: 350, height: 80))
     let activityCard2 = activityCardView(frame: CGRect(x: UIScreen.main.bounds.size.width / 2 - 175, y: 450, width: 350, height: 80))
     let activityCard3 = activityCardView(frame: CGRect(x: UIScreen.main.bounds.size.width / 2 - 175, y: 550, width: 350, height: 80))
     var activitiesHeader : UILabel = UILabel(frame: CGRect(x: 30, y: 275, width: 250, height: 100))
     var calendarHeader : UILabel = UILabel(frame: CGRect(x: 30, y: 630, width: 250, height: 100))
     var calendarDisplay = calendarView(frame: CGRect(x: UIScreen.main.bounds.size.width / 2 - 175, y: 700, width: 350, height: 300))
-    
-    let qotdScrollView = UIScrollView()
-    let pageControl = UIPageControl()
+//    let logo : UIImageView = UIImageView(frame: CGRect(x: UIScreen.main.bounds.size.width / 2 - 100, y: -10, width: 200, height: 100))
+    let qotdScrollView = UIScrollView(frame: CGRect(x: UIScreen.main.bounds.size.width / 2 - 175, y: 115, width: 350, height: 164))
+    let pageControl = UIPageControl(frame: CGRect(x: UIScreen.main.bounds.size.width / 2 - 175, y: 275, width: 350, height: 50))
     var slides:[qotdView] = []
     
     //When view loads...
@@ -36,8 +35,8 @@ class homeViewController: UIViewController, UIScrollViewDelegate{
         qotdScrollView.delegate = self
         slides = createSlides()
         setupSlideScrollView(slides: slides)
-        pageControl.numberOfPages = slides.count
-        pageControl.currentPage = 0
+        pageControlConfig()
+        
         //connect to database
         //let ref = Database.database() . reference()
         //ref.child("someid/name").setValue("Mike")
@@ -51,21 +50,17 @@ class homeViewController: UIViewController, UIScrollViewDelegate{
         //Set view bg color
         view.backgroundColor = UIColor(named: "backgroundColor")
         
+//        logo.image = UIImage(named: "solidLogo")
+//        scrollView.addSubview(logo)
         
-        
-        //scrollView.addSubview(qotdCard)
         
         //Added welcome labels
         addWelcomeLabels()
         
         //setup qotd scroll view
-       
         setupQOTDCarousel()
         pageControl.numberOfPages = slides.count
         pageControl.currentPage = 0
-        
-        pageControl.backgroundColor = UIColor.orange
-        pageControl.pageIndicatorTintColor = UIColor.blue
         scrollView.addSubview(pageControl)
         scrollView.bringSubviewToFront(pageControl)
         
@@ -124,40 +119,38 @@ class homeViewController: UIViewController, UIScrollViewDelegate{
     func setupQOTDCarousel(){
         qotdScrollView.translatesAutoresizingMaskIntoConstraints = false
         scrollView.addSubview(qotdScrollView)
-        qotdScrollView.backgroundColor = UIColor(named: "backgroundColor")
-        qotdScrollView.frame = CGRect(x: UIScreen.main.bounds.size.width / 2 - 175, y: 115, width: 350, height: 164)
         qotdScrollView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        qotdScrollView.centerYAnchor.constraint(equalTo: scrollView.topAnchor, constant: 200).isActive = true
         qotdScrollView.widthAnchor.constraint(equalToConstant: 350).isActive = true
         qotdScrollView.heightAnchor.constraint(equalToConstant: 164).isActive = true
-        
+
+        qotdScrollView.showsHorizontalScrollIndicator = false
+        qotdScrollView.showsVerticalScrollIndicator = false
+        qotdScrollView.backgroundColor = UIColor.clear
     }
     
    
     
     func createSlides() -> [qotdView] {
         
-        var qotdView1 = qotdView(frame: CGRect(x: UIScreen.main.bounds.size.width / 2 - 175, y: 115, width: 200, height: 164))
+        var qotdView1 = qotdView()
         qotdView1.title.text = "TITLE 1"
-        var qotdView2 = qotdView(frame: CGRect(x: UIScreen.main.bounds.size.width / 2 - 175, y: 115, width: 350, height: 164))
+        var qotdView2 = qotdView()
         qotdView2.title.text = "TITLE 2"
-        var qotdView3 = qotdView(frame: CGRect(x: UIScreen.main.bounds.size.width / 2 - 175, y: 115, width: 350, height: 164))
+        var qotdView3 = qotdView()
         qotdView3.title.text = "TITLE 3"
-        qotdView1.layer.cornerRadius = qotdView1.frame.size.width * 0.1
-        qotdView1.layer.maskedCorners = [.layerMinXMinYCorner,.layerMinXMaxYCorner, .layerMaxXMaxYCorner, .layerMaxXMinYCorner]
-        qotdView2.layer.cornerRadius = qotdView1.frame.size.width * 0.1
-        qotdView2.layer.maskedCorners = [.layerMinXMinYCorner,.layerMinXMaxYCorner, .layerMaxXMaxYCorner, .layerMaxXMinYCorner]
-        qotdView3.layer.cornerRadius = qotdView1.frame.size.width * 0.1
-        qotdView3.layer.maskedCorners = [.layerMinXMinYCorner,.layerMinXMaxYCorner, .layerMaxXMaxYCorner, .layerMaxXMinYCorner]
+
         
         return [qotdView1, qotdView2, qotdView3]
     }
     
     func setupSlideScrollView(slides : [qotdView]) {
         qotdScrollView.contentSize = CGSize(width: 350 * CGFloat(slides.count), height: 164)
+        
         qotdScrollView.isPagingEnabled = true
             
             for i in 0 ..< slides.count {
-                slides[i].frame = CGRect(x: 350 * CGFloat(i), y: 0, width: 350, height: view.frame.height)
+                slides[i].frame = CGRect(x: 350 * CGFloat(i), y: 0, width: 350, height: 164)
                 qotdScrollView.addSubview(slides[i])
                 print("added \(slides[i].title)")
             }
@@ -165,14 +158,23 @@ class homeViewController: UIViewController, UIScrollViewDelegate{
     
     
     
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print("SCROLLED")
-        let pageIndex = round(scrollView.contentOffset.x/view.frame.width)
-        pageControl.currentPage = Int(pageIndex)
-        print("page ind \(pageIndex)")
-        scrollView.showsHorizontalScrollIndicator = false
-        scrollView.showsVerticalScrollIndicator = false
-    }
+    
+    
+    func pageControlConfig() {
+        pageControl.numberOfPages = slides.count
+        pageControl.currentPage = 0
+        pageControl.isUserInteractionEnabled = false
+        pageControl.pageIndicatorTintColor = UIColor(named: "lightTextColor")
+        pageControl.currentPageIndicatorTintColor = UIColor.black
+        pageControl.transform = CGAffineTransform(scaleX: 0.75, y: 0.75)
+        view.addSubview(pageControl)
+        
+     }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+       let pageNumber = round(scrollView.contentOffset.x / scrollView.frame.size.width)
+       pageControl.currentPage = Int(pageNumber)
+   }
 
     
 }
