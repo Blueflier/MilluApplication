@@ -164,11 +164,13 @@ class exploreViewController: UIViewController {
         
         // temp subs
         recommendedScrollContainer.addSubview(reccommended1)
-        
+        reccommended1.image.image = UIImage(named: "clothes")
         reccommended2.questionLabel.text = "What's one of your favorite meals and why?"
         reccommended3.questionLabel.text = "What's one thing you really enjoy about yourself?"
-        reccommended2.image = UIImageView(image: UIImage(named: "food.jpg"))
-        reccommended3.image = UIImageView(image: UIImage(named: "celebrate.jpg"))
+        reccommended2.image.image = UIImage(named: "food")
+        reccommended3.image.image = UIImage(named: "celebrate")
+        reccommended2.titleLabel.text = "Meals"
+        reccommended3.titleLabel.text = "Positivity"
         recommendedScrollContainer.addSubview(reccommended2)
         recommendedScrollContainer.addSubview(reccommended3)
        
@@ -210,9 +212,12 @@ class exploreViewController: UIViewController {
         reccommended4.questionLabel.text = "If you could be a famous person for a week, who would you be and why?"
         reccommended5.questionLabel.text = "If you had one wish (and you can’t wish for more wishes), what would you wish for and why?"
         reccommended6.questionLabel.text = "What's one new thing you learned today"
-        reccommended4.image = UIImageView(image: UIImage(named: "img"))
-        reccommended5.image = UIImageView(image: UIImage(named: "img"))
-        reccommended6.image = UIImageView(image: UIImage(named: "img"))
+        reccommended4.image.image = UIImage(named: "famous")
+        reccommended5.image.image = UIImage(named: "wishing")
+        reccommended6.image.image = UIImage(named: "learning")
+        reccommended4.titleLabel.text = "Role Models"
+        reccommended5.titleLabel.text = "Wants and Needs"
+        reccommended6.titleLabel.text = "Learning"
         
         popularScrollContainer.addSubview(reccommended4)
         popularScrollContainer.addSubview(reccommended5)
@@ -253,10 +258,12 @@ class exploreViewController: UIViewController {
         reccommended7.questionLabel.text = "Take 3 deep breathes, How do I feel right now? Does any part of my body feel heavy? Why?"
         reccommended8.questionLabel.text = "What is one activity you think that gives you energy and joy? How often do you do it? "
         reccommended9.questionLabel.text = "What one thing I want to grow in this year? Or month? Who can I ask for help?"
-        reccommended7.image = UIImageView(image: UIImage(named: "img"))
-        reccommended8.image = UIImageView(image: UIImage(named: "img"))
-        reccommended9.image = UIImageView(image: UIImage(named: "img"))
-        
+        reccommended7.image.image = UIImage(named: "peaceful")
+        reccommended8.image.image = UIImage(named: "activity")
+        reccommended9.image.image = UIImage(named: "planning")
+        reccommended7.titleLabel.text = "Self Awareness"
+        reccommended8.titleLabel.text = "Movement & Activity"
+        reccommended9.titleLabel.text = "Growth"
         newScrollContainer.addSubview(reccommended7)
         newScrollContainer.addSubview(reccommended8)
         newScrollContainer.addSubview(reccommended9)
