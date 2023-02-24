@@ -164,6 +164,11 @@ class exploreViewController: UIViewController {
         
         // temp subs
         recommendedScrollContainer.addSubview(reccommended1)
+        
+        reccommended2.questionLabel.text = "What's one of your favorite meals and why?"
+        reccommended3.questionLabel.text = "What's one thing you really enjoy about yourself?"
+        reccommended2.image = UIImageView(image: UIImage(named: "food.jpg"))
+        reccommended3.image = UIImageView(image: UIImage(named: "celebrate.jpg"))
         recommendedScrollContainer.addSubview(reccommended2)
         recommendedScrollContainer.addSubview(reccommended3)
        
@@ -202,6 +207,13 @@ class exploreViewController: UIViewController {
         ])
         
         // temp subs
+        reccommended4.questionLabel.text = "If you could be a famous person for a week, who would you be and why?"
+        reccommended5.questionLabel.text = "If you had one wish (and you can’t wish for more wishes), what would you wish for and why?"
+        reccommended6.questionLabel.text = "What's one new thing you learned today"
+        reccommended4.image = UIImageView(image: UIImage(named: "img"))
+        reccommended5.image = UIImageView(image: UIImage(named: "img"))
+        reccommended6.image = UIImageView(image: UIImage(named: "img"))
+        
         popularScrollContainer.addSubview(reccommended4)
         popularScrollContainer.addSubview(reccommended5)
         popularScrollContainer.addSubview(reccommended6)
@@ -238,7 +250,13 @@ class exploreViewController: UIViewController {
         ])
         
         // temp subs
-        reccommended7.titleLabel.text = "Selfless Wish"
+        reccommended7.questionLabel.text = "Take 3 deep breathes, How do I feel right now? Does any part of my body feel heavy? Why?"
+        reccommended8.questionLabel.text = "What is one activity you think that gives you energy and joy? How often do you do it? "
+        reccommended9.questionLabel.text = "What one thing I want to grow in this year? Or month? Who can I ask for help?"
+        reccommended7.image = UIImageView(image: UIImage(named: "img"))
+        reccommended8.image = UIImageView(image: UIImage(named: "img"))
+        reccommended9.image = UIImageView(image: UIImage(named: "img"))
+        
         newScrollContainer.addSubview(reccommended7)
         newScrollContainer.addSubview(reccommended8)
         newScrollContainer.addSubview(reccommended9)
