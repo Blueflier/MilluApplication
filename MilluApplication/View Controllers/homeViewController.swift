@@ -33,9 +33,8 @@ class homeViewController: UIViewController, UIScrollViewDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         qotdScrollView.delegate = self
-        slides = createSlides()
-        setupSlideScrollView(slides: slides)
-        pageControlConfig()
+        
+        
         
         //connect to database
         //let ref = Database.database() . reference()
@@ -50,12 +49,22 @@ class homeViewController: UIViewController, UIScrollViewDelegate{
         //Set view bg color
         view.backgroundColor = UIColor(named: "backgroundColor")
         
+        
+        // millu logo bar
+        
+
+        view.addSubview(logoBar)
 //        logo.image = UIImage(named: "solidLogo")
 //        scrollView.addSubview(logo)
         
         
         //Added welcome labels
         addWelcomeLabels()
+        
+        // slide settings
+        pageControlConfig()
+        slides = createSlides()
+        setupSlideScrollView(slides: slides)
         
         //setup qotd scroll view
         setupQOTDCarousel()
@@ -77,8 +86,6 @@ class homeViewController: UIViewController, UIScrollViewDelegate{
     
     
     func addWelcomeLabels() {
-        
-        
         //get local time
         let hour  = (Calendar.current.component(.hour, from: Date()))
         if (hour < 12) {
@@ -139,6 +146,27 @@ class homeViewController: UIViewController, UIScrollViewDelegate{
         qotdView2.title.text = "TITLE 2"
         var qotdView3 = qotdView()
         qotdView3.title.text = "TITLE 3"
+        
+        
+        // manually setting stuff up
+        let boldAttribute = [ NSAttributedString.Key.font: UIFont(name: "Jost-Medium", size: 10)! ]
+        let regularAttribute = [ NSAttributedString.Key.font: UIFont(name: "Jost-Regular", size: 10)! ]
+        let regularText = NSAttributedString(string: "Question of the Day · ", attributes: regularAttribute)
+        var boldText = NSAttributedString( string: "January 24th", attributes: boldAttribute)
+        var newString = NSMutableAttributedString()
+        newString.append(regularText)
+        newString.append(boldText)
+    
+        
+        qotdView1.title.attributedText = newString
+        qotdView2.title.attributedText = newString
+        qotdView3.title.attributedText = newString
+        qotdView1.question.text = "If you had to cross a river, how would you do it?"
+        qotdView2.question.text = "If you could have any superpower, which would’ve been helpful to have today?"
+        qotdView3.question.text = "What is one thought that keeps popping up in your head?"
+        qotdView1.imgView.image = UIImage(named: "placeholderRiver")
+        qotdView2.imgView.image = UIImage(named: "placeholderSuperpower")
+        qotdView3.imgView.image = UIImage(named: "placeholderThinking")
 
         
         return [qotdView1, qotdView2, qotdView3]

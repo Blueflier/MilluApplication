@@ -91,17 +91,17 @@
         <scene sceneID="yoq-2u-kq4">
             <objects>
                 <viewController id="SjQ-Dv-eoB" customClass="homeViewController" customModule="MilluApplication" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="QcA-MH-f9i">
+                    <view key="view" contentMode="scaleToFill" id="QcA-MH-f9i">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fpa-lh-pwc">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fpa-lh-pwc">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="V7b-JA-YwG">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1500"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V7b-JA-YwG">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1100"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="1500" id="gGt-fZ-GNj"/>
+                                            <constraint firstAttribute="height" constant="1100" id="gGt-fZ-GNj"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -116,7 +116,6 @@
                         <viewLayoutGuide key="safeArea" id="Spb-7t-4CT"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="V7b-JA-YwG" firstAttribute="height" secondItem="QcA-MH-f9i" secondAttribute="height" multiplier="1.67411" id="0tv-Rg-7kw"/>
                             <constraint firstItem="V7b-JA-YwG" firstAttribute="width" secondItem="QcA-MH-f9i" secondAttribute="width" id="8k8-vz-iwo"/>
                             <constraint firstItem="fpa-lh-pwc" firstAttribute="top" secondItem="QcA-MH-f9i" secondAttribute="top" id="96D-Tg-Cbh"/>
                             <constraint firstItem="fpa-lh-pwc" firstAttribute="leading" secondItem="Spb-7t-4CT" secondAttribute="leading" id="GZY-dD-gbu"/>
@@ -231,7 +230,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="eKx-Hm-noD"/>
+        <segue reference="EyT-8q-1Si"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="house.fill" catalog="system" width="128" height="104"/>
