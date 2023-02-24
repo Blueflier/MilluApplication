@@ -53,7 +53,6 @@ class homeViewController: UIViewController, UIScrollViewDelegate{
         // millu logo bar
         
 
-        view.addSubview(logoBar)
 //        logo.image = UIImage(named: "solidLogo")
 //        scrollView.addSubview(logo)
         
