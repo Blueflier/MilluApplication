@@ -56,24 +56,7 @@ class qotdView: UIView {
           //Realtime Database stuff
           ref = Database.database().reference()
           
-          //get date
-          let date = Date().formatted(date: .numeric, time: .omitted)
           
-          let findDate = date.replacingOccurrences(of: "/", with: "")
-          
-          ref.child("QuestionOfTheDay/\(findDate)").observeSingleEvent(of: .value, with: { snapshot in
-              guard let value = snapshot.value as? [String: Any] else {
-                  print("hmm err here ^")
-                  return
-
-              }
-              for item in value {
-                  if (item.key == "Question") {
-                      self.question.text = item.value as! String
-                  }
-                  
-              }
-          })
           
           
           
@@ -106,52 +89,18 @@ class qotdView: UIView {
           //firebase database connection
           let ref = Database.database().reference()
           
-                    
-          //get the day from string
-          var start = date.index(date.startIndex, offsetBy: 3)
-          var end = date.index(date.startIndex, offsetBy: 5)
-          var range = start..<end
-          var subDayPre = date[range]
-          var subDay: String = ""
-          
-          // get month
-          var subMonth = date.prefix(2)
-          //check if month is less than 10 (i.e. only one digit
-          if subMonth.contains("/") {
-              subMonth = subMonth.dropLast(1)
-              //get the day from string
-               start = date.index(date.startIndex, offsetBy: 2)
-               end = date.index(date.startIndex, offsetBy: 4)
-               range = start..<end
-               subDayPre = date[range]
-               subDay = ""
-          }
-          
           
           // format the date using ordinal formatting
-          if (days.contains{ $0.value == subDayPre }) {
-              subDay = days[String(subDayPre)]!
+          var printDate = "\(DateFormatter().monthSymbols[Calendar.current.component(.month, from: Date()) - 1]) \(Calendar.current.component(.day, from: Date()))"
+          if (Calendar.current.component(.day, from: Date()) % 10 == 1) {
+              printDate += "st"
+          } else if (Calendar.current.component(.day, from: Date()) % 10 == 2) {
+              printDate += "nd"
+          } else if (Calendar.current.component(.day, from: Date()) % 10 == 3){
+              printDate += "rd"
+          } else {
+              printDate += "th"
           }
-          
-          switch (subDayPre) {
-              case "1", "21", "31":
-                    subDay = subDayPre + ("st")
-              case "2" , "22":
-                    subDay = subDayPre + ("nd")
-              case "3" ,"23":
-                    subDay = subDayPre + ("rd")
-              default:
-                    subDay = subDayPre + ("th")
-            }
-          
-          // ensure date does not contain "/"
-          if subDay.contains("/") {
-              subDay = subDay.replacingOccurrences(of: "/", with: "")
-          }
-          
-         
-          //I AM HERE - I NEED TO KEEP WORKING ON PULLING THE DATA FOR THE QUESTION
-          //I don't know how to pull it to here
           
           
           
@@ -185,7 +134,7 @@ class qotdView: UIView {
           let boldAttribute = [ NSAttributedString.Key.font: UIFont(name: "Jost-Medium", size: 10)! ]
           let regularAttribute = [ NSAttributedString.Key.font: UIFont(name: "Jost-Regular", size: 10)! ]
           let regularText = NSAttributedString(string: "Question of the Day · ", attributes: regularAttribute)
-          let boldText = NSAttributedString(string: String(months[String(subMonth)]!) + " " + subDay, attributes: boldAttribute)
+          let boldText = NSAttributedString(string: printDate, attributes: boldAttribute)
           let newString = NSMutableAttributedString()
           newString.append(regularText)
           newString.append(boldText)
@@ -212,7 +161,24 @@ class qotdView: UIView {
           likeButton.tintColor = UIColor(named: "lightTextColor")
           addSubview(likeButton)
           
+          
       }
+    
+    // get question of the day ids
+    func getInfoFromId(id: String) async -> Question {
+
+        var temp: Question = Question(question: "", title: "", likeCount: 0, devDate: "", publicDate: "", publicAge: 0, time: "", devTags: [], publicTags: [])
+        ref.child("Questions/\(id)").getData(completion:  { error, snapshot in
+          guard error == nil else {
+            print(error!.localizedDescription)
+            return;
+          }
+         temp = Question(question: snapshot?.value(forKey: "Question") as! String, title: snapshot?.value(forKey: "Title") as! String, likeCount: snapshot?.value(forKey: "LikeCount") as! Int, devDate: snapshot?.value(forKey: "DevDate") as! String, publicDate: snapshot?.value(forKey: "PublicDate") as! String, publicAge: snapshot?.value(forKey: "PublicAge") as! Int, time: snapshot?.value(forKey: "Time") as! String, devTags: snapshot?.value(forKey: "DevTags") as! [String], publicTags: snapshot?.value(forKey: "PublicTags") as! [String])
+            //temp.question = snapshot?.value(forKey: "Question") as! String
+            
+        });
+        return temp
+    }
     
     
 }

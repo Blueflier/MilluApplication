@@ -29,6 +29,9 @@ class homeViewController: UIViewController, UIScrollViewDelegate{
     let pageControl = UIPageControl(frame: CGRect(x: UIScreen.main.bounds.size.width / 2 - 175, y: 275, width: 350, height: 50))
     var slides:[qotdView] = []
     
+    //connect to database
+    let ref = Database.database().reference()
+    
     //When view loads...
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,9 +39,7 @@ class homeViewController: UIViewController, UIScrollViewDelegate{
         
         
         
-        //connect to database
-        //let ref = Database.database() . reference()
-        //ref.child("someid/name").setValue("Mike")
+        
     }
     
     
@@ -52,7 +53,9 @@ class homeViewController: UIViewController, UIScrollViewDelegate{
         
         // millu logo bar
         
-
+        
+        
+   
 //        logo.image = UIImage(named: "solidLogo")
 //        scrollView.addSubview(logo)
         
@@ -94,6 +97,7 @@ class homeViewController: UIViewController, UIScrollViewDelegate{
         } else {
             welcomeLabel.text = "Good Evening!"
         }
+        
         
         //add welcome label subview
         welcomeLabel.font = UIFont(name: "Jost-Regular", size: 15)
@@ -140,26 +144,30 @@ class homeViewController: UIViewController, UIScrollViewDelegate{
     func createSlides() -> [qotdView] {
         
         var qotdView1 = qotdView()
-        qotdView1.title.text = "TITLE 1"
         var qotdView2 = qotdView()
-        qotdView2.title.text = "TITLE 2"
         var qotdView3 = qotdView()
-        qotdView3.title.text = "TITLE 3"
         
+        
+        // get qotd ids
+        Task{
+            var temp = await getQotdIds()
+            for x in temp {
+                print(x)
+            }
+            
+        }
+        
+        
+        
+                
         
         // manually setting stuff up
         let boldAttribute = [ NSAttributedString.Key.font: UIFont(name: "Jost-Medium", size: 10)! ]
         let regularAttribute = [ NSAttributedString.Key.font: UIFont(name: "Jost-Regular", size: 10)! ]
         let regularText = NSAttributedString(string: "Question of the Day · ", attributes: regularAttribute)
-        var boldText = NSAttributedString( string: "January 24th", attributes: boldAttribute)
-        var newString = NSMutableAttributedString()
-        newString.append(regularText)
-        newString.append(boldText)
-    
         
-        qotdView1.title.attributedText = newString
-        qotdView2.title.attributedText = newString
-        qotdView3.title.attributedText = newString
+    
+  
         qotdView1.question.text = "If you had to cross a river, how would you do it?"
         qotdView2.question.text = "If you could have any superpower, which would’ve been helpful to have today?"
         qotdView3.question.text = "What is one thought that keeps popping up in your head?"
@@ -204,6 +212,32 @@ class homeViewController: UIViewController, UIScrollViewDelegate{
    }
 
     
+    
+    
+    // get question of the day ids
+    func getQotdIds() async -> [String] {
+        var temp:[String] = []
+
+
+        ref.child("QuestionOfTheDay").getData(completion:  { error, snapshot in
+          guard error == nil else {
+            print(error!.localizedDescription)
+            return;
+          }
+            //let userName = snapshot?.value as? String ?? "Unknown";
+            for rest in snapshot!.children.allObjects as! [DataSnapshot] {
+                temp.append(rest.value as! String ?? "Error")
+                print(rest.value ?? "Error")
+            }
+            
+        });
+        
+        return temp
+    }
+    
 }
     
+
+
+
 

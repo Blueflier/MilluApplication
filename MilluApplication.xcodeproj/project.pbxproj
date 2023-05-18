@@ -20,6 +20,8 @@
 		14C5B19E28CBC7C000B173C6 /* activityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C5B19D28CBC7C000B173C6 /* activityCard.swift */; };
 		14C5B1A028CBC8DB00B173C6 /* questionCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C5B19F28CBC8DB00B173C6 /* questionCard.swift */; };
 		14C5B1A228CBC94A00B173C6 /* cardPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C5B1A128CBC94900B173C6 /* cardPage.swift */; };
+		14C7E2BA2A15824E004F3B81 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C7E2B92A15824E004F3B81 /* Question.swift */; };
+		14C7E2BC2A158727004F3B81 /* profileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C7E2BB2A158727004F3B81 /* profileViewController.swift */; };
 		901327FD298D9AC000B66ABB /* GoogleAppMeasurement in Frameworks */ = {isa = PBXBuildFile; productRef = 901327FC298D9AC000B66ABB /* GoogleAppMeasurement */; };
 		9029F8ED28C29CC0009E7819 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9029F8EC28C29CC0009E7819 /* AppDelegate.swift */; };
 		9029F8EF28C29CC0009E7819 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9029F8EE28C29CC0009E7819 /* SceneDelegate.swift */; };
@@ -90,6 +92,8 @@
 		14C5B19D28CBC7C000B173C6 /* activityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = activityCard.swift; sourceTree = "<group>"; };
 		14C5B19F28CBC8DB00B173C6 /* questionCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = questionCard.swift; sourceTree = "<group>"; };
 		14C5B1A128CBC94900B173C6 /* cardPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cardPage.swift; sourceTree = "<group>"; };
+		14C7E2B92A15824E004F3B81 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		14C7E2BB2A158727004F3B81 /* profileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = profileViewController.swift; sourceTree = "<group>"; };
 		9029F8E928C29CC0009E7819 /* MilluApplication.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MilluApplication.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9029F8EC28C29CC0009E7819 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9029F8EE28C29CC0009E7819 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -175,6 +179,7 @@
 				90A6B73928E94EA70023950C /* loginViewController.swift */,
 				14B5C17A28E769E800D31EFC /* homeViewController.swift */,
 				14570B7728E8C558007F4974 /* exploreViewController.swift */,
+				14C7E2BB2A158727004F3B81 /* profileViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -187,6 +192,7 @@
 				9029F8EE28C29CC0009E7819 /* SceneDelegate.swift */,
 				14C5B19928CBC34700B173C6 /* templateCard.swift */,
 				14C5B19B28CBC73500B173C6 /* qotdCard.swift */,
+				14C7E2B92A15824E004F3B81 /* Question.swift */,
 				14C5B19D28CBC7C000B173C6 /* activityCard.swift */,
 				14C5B19F28CBC8DB00B173C6 /* questionCard.swift */,
 				14C5B1A128CBC94900B173C6 /* cardPage.swift */,
@@ -418,12 +424,14 @@
 			files = (
 				14C5B1A228CBC94A00B173C6 /* cardPage.swift in Sources */,
 				9029F8F128C29CC0009E7819 /* ViewController.swift in Sources */,
+				14C7E2BC2A158727004F3B81 /* profileViewController.swift in Sources */,
 				14570B8128E8F9BF007F4974 /* calendarView.swift in Sources */,
 				14C5B19C28CBC73500B173C6 /* qotdCard.swift in Sources */,
 				14B5C17B28E769E800D31EFC /* homeViewController.swift in Sources */,
 				14C5B19E28CBC7C000B173C6 /* activityCard.swift in Sources */,
 				9029F8ED28C29CC0009E7819 /* AppDelegate.swift in Sources */,
 				9029F8EF28C29CC0009E7819 /* SceneDelegate.swift in Sources */,
+				14C7E2BA2A15824E004F3B81 /* Question.swift in Sources */,
 				90A6B73A28E94EA70023950C /* loginViewController.swift in Sources */,
 				14C5B19A28CBC34700B173C6 /* templateCard.swift in Sources */,
 				14570B7828E8C558007F4974 /* exploreViewController.swift in Sources */,
@@ -604,7 +612,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SM4UF9D2DS;
+				DEVELOPMENT_TEAM = FL773TU262;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MilluApplication/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Millu;
@@ -635,7 +643,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = SM4UF9D2DS;
+				DEVELOPMENT_TEAM = FL773TU262;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MilluApplication/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Millu;
